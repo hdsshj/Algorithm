@@ -17,8 +17,9 @@
 # Member
 [오준석](https://github.com/junseok93)
 
-[이승준](https://github.com/hdsshj)
+[이승준](https://github.com/LEESEUNGJUNa)
 
-[한우석](https://github.com/ARONGLEE)
+[한우석](https://github.com/hdsshj)
 
-[이아영](https://github.com/LEESEUNGJUNa)
+[이아영](https://github.com/ARONGLEE)
+

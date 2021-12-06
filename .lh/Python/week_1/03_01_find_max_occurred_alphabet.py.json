@@ -1,0 +1,18 @@
+{
+    "sourceFile": "Python/week_1/03_01_find_max_occurred_alphabet.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1638769293497,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1638769293497,
+            "name": "Commit-0",
+            "content": "input = \"hello my name is sparta\"\n\n\ndef find_max_occurred_alphabet(string):\n    alphabet_array = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',\n                      't', 'u', 'v', 'w', 'x', 'y', 'z']\n\n    max_occurrence = 0\n    max_alphabet = alphabet_array[0]\n\n    for alphabet in alphabet_array:\n        occurrence = 0\n        for char in string:\n            if char == alphabet:\n                occurrence += 1\n        if occurrence > max_occurrence:\n            max_occurrence = occurrence\n            max_alphabet = alphabet\n    return  max_alphabet\nprint(find_max_occurred_alphabet(input))\n"
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "sourceFile": ".vscode/launch.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1638768173489,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1638768275476,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,8 @@\n   // 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387을(를) 방문하세요.\n   \"version\": \"0.2.0\",\n   \"configurations\": [\n     {\n-      \"name\": \"Python: Current File\",\n       \"type\": \"python\",\n       \"request\": \"launch\",\n       \"program\": \"${file}\",\n       \"console\": \"integratedTerminal\"\n"
+                },
+                {
+                    "date": 1638768293850,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,8 @@\n   \"configurations\": [\n     {\n       \"type\": \"python\",\n       \"request\": \"launch\",\n-      \"program\": \"${file}\",\n       \"console\": \"integratedTerminal\"\n     }\n   ]\n }\n"
+                },
+                {
+                    "date": 1638768305814,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,9 @@\n {\n-  // IntelliSense를 사용하여 가능한 특성에 대해 알아보세요.\n-  // 기존 특성에 대한 설명을 보려면 가리킵니다.\n-  // 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387을(를) 방문하세요.\n-  \"version\": \"0.2.0\",\n-  \"configurations\": [\n-    {\n-      \"type\": \"python\",\n-      \"request\": \"launch\",\n-      \"console\": \"integratedTerminal\"\n-    }\n-  ]\n+  // See https://go.microsoft.com/fwlink/?LinkId=733558\n+  // for the documentation about the tasks.json format\n+  \"version\": \"3.7.1\",\n+  \"command\": \"python3\",\n+  \"isShellCommand\": true,\n+  \"args\": [\"${file}\"],\n+  \"showOutput\": \"always\"\n }\n"
+                },
+                {
+                    "date": 1638768490030,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,7 @@\n   // See https://go.microsoft.com/fwlink/?LinkId=733558\n   // for the documentation about the tasks.json format\n   \"version\": \"3.7.1\",\n   \"command\": \"python3\",\n-  \"isShellCommand\": true,\n   \"args\": [\"${file}\"],\n   \"showOutput\": \"always\"\n }\n"
+                },
+                {
+                    "date": 1638768515555,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,7 +2,8 @@\n   // See https://go.microsoft.com/fwlink/?LinkId=733558\n   // for the documentation about the tasks.json format\n   \"version\": \"3.7.1\",\n   \"command\": \"python3\",\n+  \"isShellCommand\": false,\n   \"args\": [\"${file}\"],\n   \"showOutput\": \"always\"\n }\n"
+                },
+                {
+                    "date": 1638768538388,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,15 @@\n {\n-  // See https://go.microsoft.com/fwlink/?LinkId=733558\n-  // for the documentation about the tasks.json format\n-  \"version\": \"3.7.1\",\n-  \"command\": \"python3\",\n-  \"isShellCommand\": false,\n-  \"args\": [\"${file}\"],\n-  \"showOutput\": \"always\"\n+  // IntelliSense를 사용하여 가능한 특성에 대해 알아보세요.\n+  // 기존 특성에 대한 설명을 보려면 가리킵니다.\n+  // 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387을(를) 방문하세요.\n+  \"version\": \"0.2.0\",\n+  \"configurations\": [\n+    {\n+      \"name\": \"Python: Current File\",\n+      \"type\": \"python\",\n+      \"request\": \"launch\",\n+      \"program\": \"${file}\",\n+      \"console\": \"integratedTerminal\"\n+    }\n+  ]\n }\n"
+                }
+            ],
+            "date": 1638768173489,
+            "name": "Commit-0",
+            "content": "{\n  // IntelliSense를 사용하여 가능한 특성에 대해 알아보세요.\n  // 기존 특성에 대한 설명을 보려면 가리킵니다.\n  // 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387을(를) 방문하세요.\n  \"version\": \"0.2.0\",\n  \"configurations\": [\n    {\n      \"name\": \"Python: Current File\",\n      \"type\": \"python\",\n      \"request\": \"launch\",\n      \"program\": \"${file}\",\n      \"console\": \"integratedTerminal\"\n    }\n  ]\n}\n"
+        }
+    ]
+}

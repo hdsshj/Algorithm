@@ -1,0 +1,22 @@
+{
+    "sourceFile": "Python/week_1/02_find_alpabet_occurrence_array.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1638766916779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1638768152284,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,5 +13,5 @@\n \n     return alphabet_occurrence_array\n \n \n-print(find_alphabet_occurrence_array(\"hello my name is sparta\"))\n+print(find_alphabet_occurrence_array(\"hello my name is sparta\"))\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1638766916779,
+            "name": "Commit-0",
+            "content": "def find_alphabet_occurrence_array(string):\n    alphabet_occurrence_array = [0] * 26\n    # alphabet_array = (list(string))\n    # for alphabet in alphabet_array :\n    #     if alphabet.isalpha() == True :\n    #         alphabet_occurrence_array[ord(alphabet) - 97] = alphabet_occurrence_array[ord(alphabet) - 97] + 1\n    for char in string:\n        if not char.isalpha() :\n            continue\n        arr_index = ord(char) - ord('a')\n        alphabet_occurrence_array[arr_index] += 1\n    # 이 부분을 채워보세요!\n\n    return alphabet_occurrence_array\n\n\nprint(find_alphabet_occurrence_array(\"hello my name is sparta\"))\n"
+        }
+    ]
+}

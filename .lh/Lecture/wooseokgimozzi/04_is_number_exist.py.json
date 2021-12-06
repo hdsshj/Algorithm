@@ -1,0 +1,18 @@
+{
+    "sourceFile": "Lecture/wooseokgimozzi/04_is_number_exist.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1638787768677,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1638787768677,
+            "name": "Commit-0",
+            "content": "input = [3, 5, 6, 1, 2, 4]\n\n\ndef is_number_exist(number, array):\n    # 이 부분을 채워보세요!\n    for num in array: # array의 길이만큼 아래 연산이 실행\n      if number == num: # 비교연산 1번 실행\n        return True # N * 1 = N\n    return False # 없을 시 False\n\n\nresult = is_number_exist(11, input)\nprint(result)"
+        }
+    ]
+}

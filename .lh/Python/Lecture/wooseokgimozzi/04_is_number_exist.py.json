@@ -1,0 +1,70 @@
+{
+    "sourceFile": "Python/Lecture/wooseokgimozzi/04_is_number_exist.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 13,
+            "patches": [
+                {
+                    "date": 1638773286969,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1638773296877,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,6 +9,6 @@\n     else : \n       return True \n \n \n-result = is_number_exist(3, input)\n+result = is_number_exist(11, input)\n print(result)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638773307854,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,6 +9,6 @@\n     else : \n       return True \n \n \n-result = is_number_exist(11, input)\n+result = is_number_exist(99, input)\n print(result)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638773322781,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n def is_number_exist(number, array):\n     # 이 부분을 채워보세요!\n     for num in array:\n       if not number == num:\n-        continue\n+        return False\n     else : \n       return True \n \n \n"
+                },
+                {
+                    "date": 1638773332695,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,6 +9,6 @@\n     else : \n       return True \n \n \n-result = is_number_exist(99, input)\n+result = is_number_exist(3, input)\n print(result)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638773349931,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,12 +3,12 @@\n \n def is_number_exist(number, array):\n     # 이 부분을 채워보세요!\n     for num in array:\n-      if not number == num:\n-        return False\n+      if number == num:\n+        return True\n     else : \n-      return True \n+      return False\n \n \n result = is_number_exist(3, input)\n print(result)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638773360714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,10 @@\n     # 이 부분을 채워보세요!\n     for num in array:\n       if number == num:\n         return True\n-    else : \n-      return False\n+      else : \n+        return False\n \n \n-result = is_number_exist(3, input)\n+result = is_number_exist(1, input)\n print(result)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638773369353,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,6 +9,6 @@\n       else : \n         return False\n \n \n-result = is_number_exist(1, input)\n+result = is_number_exist(3, input)\n print(result)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638773420055,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,9 @@\n     # 이 부분을 채워보세요!\n     for num in array:\n       if number == num:\n         return True\n-      else : \n-        return False\n+    return False\n \n \n result = is_number_exist(3, input)\n print(result)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638773426786,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,6 @@\n         return True\n     return False\n \n \n-result = is_number_exist(3, input)\n+result = is_number_exist(1, input)\n print(result)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638773436939,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,6 @@\n         return True\n     return False\n \n \n-result = is_number_exist(1, input)\n+result = is_number_exist(111, input)\n print(result)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638773442963,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,6 @@\n         return True\n     return False\n \n \n-result = is_number_exist(111, input)\n+result = is_number_exist(2, input)\n print(result)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638773448321,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,6 @@\n         return True\n     return False\n \n \n-result = is_number_exist(2, input)\n+result = is_number_exist(5, input)\n print(result)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638773691660,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,12 +2,12 @@\n \n \n def is_number_exist(number, array):\n     # 이 부분을 채워보세요!\n-    for num in array:\n-      if number == num:\n-        return True\n+    for num in array: # array의 길이만큼 아래 연산이 실행\n+      if number == num: # 비교연산 1번 실행\n+        return True # N * 1 = N\n     return False\n \n \n-result = is_number_exist(5, input)\n+result = is_number_exist(11, input)\n print(result)\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1638773286969,
+            "name": "Commit-0",
+            "content": "input = [3, 5, 6, 1, 2, 4]\n\n\ndef is_number_exist(number, array):\n    # 이 부분을 채워보세요!\n    for num in array:\n      if not number == num:\n        continue\n    else : \n      return True \n\n\nresult = is_number_exist(3, input)\nprint(result)"
+        }
+    ]
+}

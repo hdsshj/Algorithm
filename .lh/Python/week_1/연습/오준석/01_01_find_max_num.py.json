@@ -1,0 +1,18 @@
+{
+    "sourceFile": "Python/week_1/연습/오준석/01_01_find_max_num.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1638769782141,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1638769782141,
+            "name": "Commit-0",
+            "content": "input = [3, 5, 6, 1, 2, 4]\n\n\ndef find_max_num(array):\n    for num in array:\n        for compare_num in array:\n            if num < compare_num:\n                break\n        else:\n            return num\n\n\nresult = find_max_num(input)\nprint(result)\n"
+        }
+    ]
+}

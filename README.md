@@ -13,3 +13,12 @@
   + 좋은 회사 취직
     + 수 많은 기업들이 코딩테스트를 통해 개발자를 구인하고 있다. 카카오,삼성,구글 등 국내외 유망 IT기업들 외에도 많은 스타트업까지 코딩테스트를 개발자의 필수관문으로 만들고 있다.
     + 그러나, 엄청나게 어려운 수준의 문제를 출제하진 않는다.기초적인 지식과 해결책으로 적절한 사고를 할 수 있는지에 대해 검증하기 위함.
+
+# Member
+[오준석](https://github.com/junseok93)
+
+[이승준](https://github.com/hdsshj)
+
+[한우석](https://github.com/ARONGLEE)
+
+[이아영](https://github.com/LEESEUNGJUNa)

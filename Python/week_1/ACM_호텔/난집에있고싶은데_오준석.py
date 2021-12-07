@@ -10,17 +10,17 @@
 # 프로그램은 표준 출력에 출력한다. 각 테스트 데이터마다 정확히 한 행을 출력하는데, 내용은 N 번째 손님에게 배정되어야 하는 방 번호를 출력한다.
 
 # n//h +1 만큼 엘베에서 떨어진곳이고, n%h만큼 층에 머무른다.
-#
-
+# 나머지가 딱 떨어지면 젤 위층
+# a 는 몫을 그대로 출력하고 , b는 h를 그대로 출력한다.
 
 
 t = int(input())
 
 for i in range(t):
     h, w, n = map(int, input().split())
-    num = n // h + 1
-    floor = n % h
+    a = n // h + 1
+    b = n % h
     if n % h == 0:
-        num = n // h
-        floor = h
-    print(f'{floor * 100 + num}')
+        a = n // h
+        b = h
+    print(f'{b * 100 + a}')

@@ -1,0 +1,22 @@
+{
+    "sourceFile": "Lecture/wooseokgimozzi/06_find_not_repeating_first_character.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1638789645664,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1638789769886,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,11 @@\n input = \"abacabade\"\n \n \n def find_not_repeating_character(string):\n+  test = string[0]\n+  for char in string :\n+    \n     # 이 부분을 채워보세요!\n     return \"_\"\n \n \n"
+                }
+            ],
+            "date": 1638789645664,
+            "name": "Commit-0",
+            "content": "input = \"abacabade\"\n\n\ndef find_not_repeating_character(string):\n    # 이 부분을 채워보세요!\n    return \"_\"\n\n\nresult = find_not_repeating_character(input)\nprint(result)"
+        }
+    ]
+}

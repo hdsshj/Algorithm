@@ -1,0 +1,18 @@
+{
+    "sourceFile": "Lecture/JunSeok/week01/01_02_find_max_num.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1638788462199,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1638788462199,
+            "name": "Commit-0",
+            "content": "input = [3, 5, 6, 1, 2, 4]\n\n\ndef find_max_num(array):\n    max_num = array[0]\n    for num in array:\n        if num > max_num:\n            max_num = num\n\n    return max_num\nresult = find_max_num(input)\nprint(result)"
+        }
+    ]
+}

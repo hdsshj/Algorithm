@@ -1,0 +1,26 @@
+{
+    "sourceFile": "Lecture/wooseokgimozzi/week_1/homework/test.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1638865797796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1638866302895,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,2 @@\n-a = [2,5,7,8,3,2,1,2]\n-\n-for n in a:\n-  print(n)\n\\ No newline at end of file\n+for i in range(2,2):\n+  print(i)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638866310926,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n-for i in range(2,2):\n+for i in range(2,3):\n   print(i)\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1638865797796,
+            "name": "Commit-0",
+            "content": "a = [2,5,7,8,3,2,1,2]\n\nfor n in a:\n  print(n)"
+        }
+    ]
+}

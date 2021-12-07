@@ -1,0 +1,234 @@
+{
+    "sourceFile": "Lecture/wooseokgimozzi/week_1/homework/01_find_prime_list_under_number.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 54,
+            "patches": [
+                {
+                    "date": 1638859040838,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1638859545845,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,13 @@\n input = 20\n \n \n def find_prime_list_under_number(number):\n-    # 이 부분을 채워보세요!\n-    return []\n+    for i in range(2, n):\n+        if n % i == 0:\n+            return False # i로 나누어 떨어지면 소수가 아니므로 False 리턴\n+    \n+    return True # False가 리턴되지 않고 for문을 빠져나왔다면 소수이므로 True 리턴\n \n \n result = find_prime_list_under_number(input)\n print(result)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638859577604,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,10 @@\n input = 20\n \n \n def find_prime_list_under_number(number):\n-    for i in range(2, n):\n-        if n % i == 0:\n-            return False # i로 나누어 떨어지면 소수가 아니므로 False 리턴\n-    \n-    return True # False가 리턴되지 않고 for문을 빠져나왔다면 소수이므로 True 리턴\n+    # 이 부분을 채워보세요!\n+    return []\n \n \n result = find_prime_list_under_number(input)\n print(result)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638859765810,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,11 @@\n input = 20\n \n \n def find_prime_list_under_number(number):\n+    for num in range(2, number-1):\n+        if number%num != 0:\n+            \n     # 이 부분을 채워보세요!\n     return []\n \n \n"
+                },
+                {
+                    "date": 1638859794138,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n input = 20\n \n \n def find_prime_list_under_number(number):\n-    for num in range(2, number-1):\n-        if number%num != 0:\n+    for num in range(2, number):\n+        if number % num :\n             \n     # 이 부분을 채워보세요!\n     return []\n \n"
+                },
+                {
+                    "date": 1638859802029,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n \n def find_prime_list_under_number(number):\n     for num in range(2, number):\n-        if number % num :\n+        if number % num == 0:\n             \n     # 이 부분을 채워보세요!\n     return []\n \n"
+                },
+                {
+                    "date": 1638859881964,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,11 +3,11 @@\n \n def find_prime_list_under_number(number):\n     for num in range(2, number):\n         if number % num == 0:\n-            \n-    # 이 부분을 채워보세요!\n-    return []\n+            continue\n+    else:\n+        return [num]\n \n \n result = find_prime_list_under_number(input)\n print(result)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638860123615,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n def find_prime_list_under_number(number):\n     for num in range(2, number):\n         if number % num == 0:\n             continue\n-    else:\n-        return [num]\n+        else:\n+            return [num]\n \n \n result = find_prime_list_under_number(input)\n print(result)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638860131892,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     for num in range(2, number):\n         if number % num == 0:\n             continue\n         else:\n-            return [num]\n+            return num\n \n \n result = find_prime_list_under_number(input)\n print(result)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638860144186,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,11 +2,9 @@\n \n \n def find_prime_list_under_number(number):\n     for num in range(2, number):\n-        if number % num == 0:\n-            continue\n-        else:\n+        if number % num != 0:\n             return num\n \n \n result = find_prime_list_under_number(input)\n"
+                },
+                {
+                    "date": 1638860171096,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,11 @@\n \n \n def find_prime_list_under_number(number):\n     for num in range(2, number):\n-        if number % num != 0:\n-            return num\n+        print(nu,)\n+        # if number % num != 0:\n+            # return num\n \n \n result = find_prime_list_under_number(input)\n print(result)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638860681490,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,11 +2,12 @@\n \n \n def find_prime_list_under_number(number):\n     for num in range(2, number):\n-        print(nu,)\n-        # if number % num != 0:\n-            # return num\n+        print(num)\n+        if number % num == 0:\n+            break\n+    return [num]\n \n \n result = find_prime_list_under_number(input)\n print(result)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638860698235,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,10 @@\n     for num in range(2, number):\n         print(num)\n         if number % num == 0:\n             break\n-    return [num]\n+    else :\n+        return [num]\n \n \n result = find_prime_list_under_number(input)\n print(result)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638860723441,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,10 @@\n     for num in range(2, number):\n         print(num)\n         if number % num == 0:\n             break\n-    else :\n-        return [num]\n+        else:\n+            return [num]\n \n \n result = find_prime_list_under_number(input)\n print(result)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638860848107,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,15 @@\n input = 20\n \n \n def find_prime_list_under_number(number):\n+    prime_list=[]\n     for num in range(2, number):\n         print(num)\n         if number % num == 0:\n             break\n         else:\n-            return [num]\n+            prime_list = num\n \n \n result = find_prime_list_under_number(input)\n print(result)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638860857726,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,8 @@\n         if number % num == 0:\n             break\n         else:\n             prime_list = num\n+    return prime_list\n \n-\n result = find_prime_list_under_number(input)\n print(result)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638860889910,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         print(num)\n         if number % num == 0:\n             break\n         else:\n-            prime_list = num\n+            prime_list.append(num) \n     return prime_list\n \n result = find_prime_list_under_number(input)\n print(result)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638860925224,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,9 @@\n     for num in range(2, number):\n         print(num)\n         if number % num == 0:\n             break\n-        else:\n-            prime_list.append(num) \n-    return prime_list\n+    else:\n+        prime_list.append(num) \n \n result = find_prime_list_under_number(input)\n print(result)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638860941582,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,8 @@\n         if number % num == 0:\n             break\n     else:\n         prime_list.append(num) \n+    return prime_list\n \n result = find_prime_list_under_number(input)\n print(result)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638861035210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     prime_list=[]\n     for num in range(2, number):\n         print(num)\n         if number % num == 0:\n-            break\n+            continue\n     else:\n         prime_list.append(num) \n     return prime_list\n \n"
+                },
+                {
+                    "date": 1638861052658,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,10 @@\n     for num in range(2, number):\n         print(num)\n         if number % num == 0:\n             continue\n-    else:\n-        prime_list.append(num) \n+        else:\n+            prime_list.append(num) \n     return prime_list\n \n result = find_prime_list_under_number(input)\n print(result)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638861157398,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,8 @@\n     for num in range(2, number):\n         print(num)\n         if number % num == 0:\n             continue\n-        else:\n-            prime_list.append(num) \n     return prime_list\n \n result = find_prime_list_under_number(input)\n print(result)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638861203911,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n     for num in range(2, number):\n         print(num)\n         if number % num == 0:\n             continue\n+    prime_list.append(num)\n     return prime_list\n \n result = find_prime_list_under_number(input)\n print(result)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638861215452,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     prime_list=[]\n     for num in range(2, number):\n         print(num)\n         if number % num == 0:\n-            continue\n+            break\n     prime_list.append(num)\n     return prime_list\n \n result = find_prime_list_under_number(input)\n"
+                },
+                {
+                    "date": 1638861226152,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     prime_list=[]\n     for num in range(2, number):\n         print(num)\n         if number % num == 0:\n-            break\n+            return False\n     prime_list.append(num)\n     return prime_list\n \n result = find_prime_list_under_number(input)\n"
+                },
+                {
+                    "date": 1638861236583,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     prime_list=[]\n     for num in range(2, number):\n         print(num)\n         if number % num == 0:\n-            return False\n+            \n     prime_list.append(num)\n     return prime_list\n \n result = find_prime_list_under_number(input)\n"
+                },
+                {
+                    "date": 1638862225007,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,16 @@\n input = 20\n \n \n def find_prime_list_under_number(number):\n-    prime_list=[]\n-    for num in range(2, number):\n-        print(num)\n-        if number % num == 0:\n-            \n-    prime_list.append(num)\n+    prime_list = []\n+    for n in range(2, number + 1):\n+        for i in range(2, n):\n+            if n % i == 0:\n+                break\n+        else:\n+            prime_list.append(n)\n+\n     return prime_list\n \n result = find_prime_list_under_number(input)\n print(result)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638862355930,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,14 +2,15 @@\n \n \n def find_prime_list_under_number(number):\n     prime_list = []\n-    for n in range(2, number + 1):\n-        for i in range(2, n):\n-            if n % i == 0:\n-                break\n+    for n in range(2, number + 1): # 2~20까지 반복\n+        print(n)\n+        for i in range(2, n): # 2~19까지 반복\n+            if n % i == 0: # 2~19까지를 2~20까지 나누었을때 나머지가 0이면\n+                break # 중단\n         else:\n-            prime_list.append(n)\n+            prime_list.append(n) # \n \n     return prime_list\n \n result = find_prime_list_under_number(input)\n"
+                },
+                {
+                    "date": 1638862365309,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n     prime_list = []\n     for n in range(2, number + 1): # 2~20까지 반복\n         print(n)\n         for i in range(2, n): # 2~19까지 반복\n+            print(i)\n             if n % i == 0: # 2~19까지를 2~20까지 나누었을때 나머지가 0이면\n                 break # 중단\n         else:\n             prime_list.append(n) # \n"
+                },
+                {
+                    "date": 1638862404916,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,8 @@\n     prime_list = []\n     for n in range(2, number + 1): # 2~20까지 반복\n         print(n)\n         for i in range(2, n): # 2~19까지 반복\n-            print(i)\n             if n % i == 0: # 2~19까지를 2~20까지 나누었을때 나머지가 0이면\n                 break # 중단\n         else:\n             prime_list.append(n) # \n"
+                },
+                {
+                    "date": 1638862417531,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,10 @@\n \n def find_prime_list_under_number(number):\n     prime_list = []\n     for n in range(2, number + 1): # 2~20까지 반복\n-        print(n)\n         for i in range(2, n): # 2~19까지 반복\n+            print(i)\n             if n % i == 0: # 2~19까지를 2~20까지 나누었을때 나머지가 0이면\n                 break # 중단\n         else:\n             prime_list.append(n) # \n"
+                },
+                {
+                    "date": 1638862481429,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n             print(i)\n             if n % i == 0: # 2~19까지를 2~20까지 나누었을때 나머지가 0이면\n                 break # 중단\n         else:\n-            prime_list.append(n) # \n+            prime_list.append(n)\n \n     return prime_list\n \n result = find_prime_list_under_number(input)\n"
+                },
+                {
+                    "date": 1638862662707,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,13 +2,12 @@\n \n \n def find_prime_list_under_number(number):\n     prime_list = []\n-    for n in range(2, number + 1): # 2~20까지 반복\n-        for i in range(2, n): # 2~19까지 반복\n-            print(i)\n-            if n % i == 0: # 2~19까지를 2~20까지 나누었을때 나머지가 0이면\n-                break # 중단\n+    for n in range(2, number + 1): # 2~20까지의 수를 반복\n+        for i in prime_list: \n+            if n % i == 0 and i * i <= n:\n+                break\n         else:\n             prime_list.append(n)\n \n     return prime_list\n"
+                },
+                {
+                    "date": 1638865528860,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,10 @@\n input = 20\n \n \n def find_prime_list_under_number(number):\n-    prime_list = []\n-    for n in range(2, number + 1): # 2~20까지의 수를 반복\n-        for i in prime_list: \n-            if n % i == 0 and i * i <= n:\n-                break\n-        else:\n-            prime_list.append(n)\n+    prime_list=[]\n+    for num in range(2, number+1):\n+        for \n \n-    return prime_list\n-\n result = find_prime_list_under_number(input)\n print(result)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638865661718,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n \n def find_prime_list_under_number(number):\n     prime_list=[]\n     for num in range(2, number+1):\n-        for \n+        for i in prime_list:\n+            print(i)\n \n result = find_prime_list_under_number(input)\n print(result)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638865683281,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n def find_prime_list_under_number(number):\n     prime_list=[]\n     for num in range(2, number+1):\n         for i in prime_list:\n+            print('돌게있니?')\n             print(i)\n \n result = find_prime_list_under_number(input)\n print(result)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638865760574,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n \n def find_prime_list_under_number(number):\n     prime_list=[]\n     for num in range(2, number+1):\n+        # 2 ~ 20까지 반복\n         for i in prime_list:\n             print('돌게있니?')\n             print(i)\n \n"
+                },
+                {
+                    "date": 1638865931005,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,13 @@\n def find_prime_list_under_number(number):\n     prime_list=[]\n     for num in range(2, number+1):\n         # 2 ~ 20까지 반복\n-        for i in prime_list:\n-            print('돌게있니?')\n-            print(i)\n+        for i in range(2,num):\n+            if i%num == 0 :\n+                break\n+        else:\n+            prime_list.append(num)\n+    return prime_list\n \n result = find_prime_list_under_number(input)\n print(result)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638866000965,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     prime_list=[]\n     for num in range(2, number+1):\n         # 2 ~ 20까지 반복\n         for i in range(2,num):\n-            if i%num == 0 :\n+            if num%i == 0 :\n                 break\n         else:\n             prime_list.append(num)\n     return prime_list\n"
+                },
+                {
+                    "date": 1638866224694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,11 +2,12 @@\n \n \n def find_prime_list_under_number(number):\n     prime_list=[]\n-    for num in range(2, number+1):\n-        # 2 ~ 20까지 반복\n-        for i in range(2,num):\n+    for num in range(2, number+1): # 2 ~ 20까지 반복\n+        for i in range(2,num): # i 를 n-1로 나눔\n+            2 1 0\n+            3 2 3 0\n             if num%i == 0 :\n                 break\n         else:\n             prime_list.append(num)\n"
+                },
+                {
+                    "date": 1638866523776,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,12 +2,11 @@\n \n \n def find_prime_list_under_number(number):\n     prime_list=[]\n-    for num in range(2, number+1): # 2 ~ 20까지 반복\n-        for i in range(2,num): # i 를 n-1로 나눔\n-            2 1 0\n-            3 2 3 0\n+    for num in range(2, number+1): # num은 2 ~ 20\n+        # for i in range(2,num): # i 를 num-1까지 나눔\n+        for i in prime_list : # prime_list는 소수의 리스트\n             if num%i == 0 :\n                 break\n         else:\n             prime_list.append(num)\n"
+                },
+                {
+                    "date": 1638866628589,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n         for i in prime_list : # prime_list는 소수의 리스트\n             if num%i == 0 :\n                 break\n         else:\n+            print(i일때도 돌아요?)\n             prime_list.append(num)\n     return prime_list\n \n result = find_prime_list_under_number(input)\n"
+                },
+                {
+                    "date": 1638866685457,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n         for i in prime_list : # prime_list는 소수의 리스트\n             if num%i == 0 :\n                 break\n         else:\n-            print(i일때도 돌아요?)\n+            print(`${i}일때도 돌아요?`)\n             prime_list.append(num)\n     return prime_list\n \n result = find_prime_list_under_number(input)\n"
+                },
+                {
+                    "date": 1638866693863,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n         for i in prime_list : # prime_list는 소수의 리스트\n             if num%i == 0 :\n                 break\n         else:\n-            print(`${i}일때도 돌아요?`)\n+            print(`{i} 일때도 돌아요?`)\n             prime_list.append(num)\n     return prime_list\n \n result = find_prime_list_under_number(input)\n"
+                },
+                {
+                    "date": 1638866731422,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n         for i in prime_list : # prime_list는 소수의 리스트\n             if num%i == 0 :\n                 break\n         else:\n-            print(`{i} 일때도 돌아요?`)\n+            print(f\"{i} 일때도 돌아요?\")\n             prime_list.append(num)\n     return prime_list\n \n result = find_prime_list_under_number(input)\n"
+                },
+                {
+                    "date": 1638866760158,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n         for i in prime_list : # prime_list는 소수의 리스트\n             if num%i == 0 :\n                 break\n         else:\n-            print(f\"{i} 일때도 돌아요?\")\n+            print(f`{i} 일때도 돌아요?`)\n             prime_list.append(num)\n     return prime_list\n \n result = find_prime_list_under_number(input)\n"
+                },
+                {
+                    "date": 1638866802567,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n         for i in prime_list : # prime_list는 소수의 리스트\n             if num%i == 0 :\n                 break\n         else:\n-            print(f`{i} 일때도 돌아요?`)\n+            print(f'{i} 일때도 돌아요?')\n             prime_list.append(num)\n     return prime_list\n \n result = find_prime_list_under_number(input)\n"
+                },
+                {
+                    "date": 1638866860578,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n         for i in prime_list : # prime_list는 소수의 리스트\n             if num%i == 0 :\n                 break\n         else:\n-            print(f'{i} 일때도 돌아요?')\n+            print(f'{num} 일때도 돌아요?')\n             prime_list.append(num)\n     return prime_list\n \n result = find_prime_list_under_number(input)\n"
+                },
+                {
+                    "date": 1638866891436,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n     prime_list=[]\n     for num in range(2, number+1): # num은 2 ~ 20\n         # for i in range(2,num): # i 를 num-1까지 나눔\n         for i in prime_list : # prime_list는 소수의 리스트\n+            print(prime_list')\n             if num%i == 0 :\n                 break\n         else:\n             print(f'{num} 일때도 돌아요?')\n"
+                },
+                {
+                    "date": 1638866917194,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,10 @@\n     prime_list=[]\n     for num in range(2, number+1): # num은 2 ~ 20\n         # for i in range(2,num): # i 를 num-1까지 나눔\n         for i in prime_list : # prime_list는 소수의 리스트\n-            print(prime_list')\n+            print('가장 처음')\n+            print(prime_list)\n             if num%i == 0 :\n                 break\n         else:\n             print(f'{num} 일때도 돌아요?')\n"
+                },
+                {
+                    "date": 1638866972748,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n \n def find_prime_list_under_number(number):\n     prime_list=[]\n     for num in range(2, number+1): # num은 2 ~ 20\n+        print(f'처음엔 {num}가 오겠죠?')\n         # for i in range(2,num): # i 를 num-1까지 나눔\n         for i in prime_list : # prime_list는 소수의 리스트\n             print('가장 처음')\n             print(prime_list)\n"
+                },
+                {
+                    "date": 1638867050063,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     prime_list=[]\n     for num in range(2, number+1): # num은 2 ~ 20\n         print(f'처음엔 {num}가 오겠죠?')\n         # for i in range(2,num): # i 를 num-1까지 나눔\n-        for i in prime_list : # prime_list는 소수의 리스트\n+        for i in prime_list : # prime_list는 소수의 리스트, num이 2일땐 prime_list가 없기 때문에 타지 않는다.\n             print('가장 처음')\n             print(prime_list)\n             if num%i == 0 :\n                 break\n"
+                },
+                {
+                    "date": 1638867232598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n         # for i in range(2,num): # i 를 num-1까지 나눔\n         for i in prime_list : # prime_list는 소수의 리스트, num이 2일땐 prime_list가 없기 때문에 타지 않는다.\n             print('가장 처음')\n             print(prime_list)\n-            if num%i == 0 :\n+            if num%i == 0 and i * i <= n:\n                 break\n         else:\n             print(f'{num} 일때도 돌아요?')\n             prime_list.append(num)\n"
+                },
+                {
+                    "date": 1638867250645,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n         # for i in range(2,num): # i 를 num-1까지 나눔\n         for i in prime_list : # prime_list는 소수의 리스트, num이 2일땐 prime_list가 없기 때문에 타지 않는다.\n             print('가장 처음')\n             print(prime_list)\n-            if num%i == 0 and i * i <= n:\n+            if num%i == 0 and i * i <= num:\n                 break\n         else:\n             print(f'{num} 일때도 돌아요?')\n             prime_list.append(num)\n"
+                },
+                {
+                    "date": 1638867341207,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,17 +3,13 @@\n \n def find_prime_list_under_number(number):\n     prime_list=[]\n     for num in range(2, number+1): # num은 2 ~ 20\n-        print(f'처음엔 {num}가 오겠죠?')\n         # for i in range(2,num): # i 를 num-1까지 나눔\n         for i in prime_list : # prime_list는 소수의 리스트, num이 2일땐 prime_list가 없기 때문에 타지 않는다.\n-            print('가장 처음')\n-            print(prime_list)\n             if num%i == 0 and i * i <= num:\n                 break\n         else:\n-            print(f'{num} 일때도 돌아요?')\n             prime_list.append(num)\n     return prime_list\n \n result = find_prime_list_under_number(input)\n"
+                }
+            ],
+            "date": 1638859040838,
+            "name": "Commit-0",
+            "content": "input = 20\n\n\ndef find_prime_list_under_number(number):\n    # 이 부분을 채워보세요!\n    return []\n\n\nresult = find_prime_list_under_number(input)\nprint(result)"
+        }
+    ]
+}

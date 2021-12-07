@@ -24,7 +24,7 @@
 # input 과 temp 가 같아지는 시점에 반복문을 종료하고 카운팅한 숫자를 출력
 
 
-num = temp = 55
+num = temp = int(input())
 
 cnt = 0
 

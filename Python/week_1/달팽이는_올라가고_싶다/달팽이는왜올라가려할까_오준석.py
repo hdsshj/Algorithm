@@ -24,10 +24,7 @@
 # 여기서 만약에 4.1일 아닌 5일이 맞는거
 # 일을 계산하고 if 문을 통해서 일이 소수를 포함하는지 확인.그리고 계산한 일자를 출력
 
-# a, b, v = map(int, input().split())
-a = 2
-b = 1
-v = 5
+a, b, v = map(int, input().split())
 d = (v - b) / (a - b)
 if d > int(d):
     d = int(d) + 1

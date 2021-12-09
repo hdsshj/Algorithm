@@ -1,0 +1,214 @@
+{
+    "sourceFile": "Lecture/wooseokgimozzi/week_2/01_print_linked_list.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 49,
+            "patches": [
+                {
+                    "date": 1639040345669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1639040358342,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,5 @@\n # [3] -> [4]\n-# \n\\ No newline at end of file\n+# data, next\n+\n+class Node :\n+  \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639040394743,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n # [3] -> [4]\n # data, next\n \n class Node :\n-  \n\\ No newline at end of file\n+  def __init__(self):\n+    \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639040417158,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n # [3] -> [4]\n # data, next\n \n class Node :\n-  def __init__(self):\n-    \n\\ No newline at end of file\n+  def __init__(self, data):\n+    self.data = data\n+    self.next = None\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639040426382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,6 @@\n \n class Node :\n   def __init__(self, data):\n     self.data = data\n-    self.next = None\n\\ No newline at end of file\n+    self.next = None\n+    \n"
+                },
+                {
+                    "date": 1639040434183,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,4 +5,5 @@\n   def __init__(self, data):\n     self.data = data\n     self.next = None\n     \n+node = Node(3)\n"
+                },
+                {
+                    "date": 1639040440659,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,4 +6,5 @@\n     self.data = data\n     self.next = None\n     \n node = Node(3)\n+print(node)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639040456024,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,5 +6,5 @@\n     self.data = data\n     self.next = None\n     \n node = Node(3)\n-print(node)\n\\ No newline at end of file\n+print(node.data)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639040512514,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,5 +6,7 @@\n     self.data = data\n     self.next = None\n     \n node = Node(3)\n+first_node = Node(4)\n+Node.next = first_node\n print(node.data)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639040524716,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,6 @@\n     self.next = None\n     \n node = Node(3)\n first_node = Node(4)\n-Node.next = first_node\n+node.next = first_node\n print(node.data)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639040554439,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,5 +8,5 @@\n     \n node = Node(3)\n first_node = Node(4)\n node.next = first_node\n-print(node.data)\n\\ No newline at end of file\n+print(node.next)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639040569939,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,5 +8,5 @@\n     \n node = Node(3)\n first_node = Node(4)\n node.next = first_node\n-print(node.next)\n\\ No newline at end of file\n+print(node.next.data)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639040662322,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,5 +8,7 @@\n     \n node = Node(3)\n first_node = Node(4)\n node.next = first_node\n-print(node.next.data)\n\\ No newline at end of file\n+print(node.next.data)\n+\n+class Linked\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639040695734,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,5 +10,8 @@\n first_node = Node(4)\n node.next = first_node\n print(node.next.data)\n \n-class Linked\n\\ No newline at end of file\n+class LinkedList :\n+  def __init__(self) :\n+    self.head = Node.\n+      \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639040702617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,6 @@\n print(node.next.data)\n \n class LinkedList :\n   def __init__(self) :\n-    self.head = Node.\n+    self.head = Node(data)\n       \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639040709172,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,7 +11,7 @@\n node.next = first_node\n print(node.next.data)\n \n class LinkedList :\n-  def __init__(self) :\n+  def __init__(self, data) :\n     self.head = Node(data)\n\\ No newline at end of file\n-      \n+    \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639040716170,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,5 +13,5 @@\n \n class LinkedList :\n   def __init__(self, data) :\n     self.head = Node(data)\n-    \n\\ No newline at end of file\n+    \n"
+                },
+                {
+                    "date": 1639040738656,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,4 +14,6 @@\n class LinkedList :\n   def __init__(self, data) :\n     self.head = Node(data)\n     \n+linked_list = LinkedList(3)\n+print(linked_list.data)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639040759734,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,5 +15,5 @@\n   def __init__(self, data) :\n     self.head = Node(data)\n     \n linked_list = LinkedList(3)\n-print(linked_list.data)\n\\ No newline at end of file\n+print(linked_list.head)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639040770702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,12 +8,11 @@\n     \n node = Node(3)\n first_node = Node(4)\n node.next = first_node\n-print(node.next.data)\n \n class LinkedList :\n   def __init__(self, data) :\n     self.head = Node(data)\n     \n linked_list = LinkedList(3)\n-print(linked_list.head)\n\\ No newline at end of file\n+print(linked_list.head.data)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639040805267,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,5 +14,5 @@\n   def __init__(self, data) :\n     self.head = Node(data)\n     \n linked_list = LinkedList(3)\n-print(linked_list.head.data)\n\\ No newline at end of file\n+print(linked_list.head.next)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639040852639,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,7 +12,9 @@\n \n class LinkedList :\n   def __init__(self, data) :\n     self.head = Node(data)\n+  \n+  def append \n     \n linked_list = LinkedList(3)\n print(linked_list.head.next)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639040860333,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,9 @@\n class LinkedList :\n   def __init__(self, data) :\n     self.head = Node(data)\n   \n-  def append \n+  def append(self) :\n     \n+    \n linked_list = LinkedList(3)\n print(linked_list.head.next)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639040872158,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n class LinkedList :\n   def __init__(self, data) :\n     self.head = Node(data)\n   \n-  def append(self) :\n+  def append(self, data) :\n     \n     \n linked_list = LinkedList(3)\n print(linked_list.head.next)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639041047331,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,6 +16,7 @@\n   \n   def append(self, data) :\n     \n     \n+    \n linked_list = LinkedList(3)\n print(linked_list.head.next)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639041059476,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   def __init__(self, data) :\n     self.head = Node(data)\n   \n   def append(self, data) :\n+    self.head.next = \n     \n     \n-    \n linked_list = LinkedList(3)\n print(linked_list.head.next)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639041073969,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,11 @@\n   def __init__(self, data) :\n     self.head = Node(data)\n   \n   def append(self, data) :\n-    self.head.next = \n+    self.head.next = Node(data)\n     \n+    cur = self.head\n     \n+    \n linked_list = LinkedList(3)\n print(linked_list.head.next)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639041094183,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,9 @@\n   def append(self, data) :\n     self.head.next = Node(data)\n     \n     cur = self.head\n+    while cur.data.next \n     \n     \n linked_list = LinkedList(3)\n print(linked_list.head.next)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639041104726,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,10 @@\n   def append(self, data) :\n     self.head.next = Node(data)\n     \n     cur = self.head\n-    while cur.data.next \n+    while cur.next == None :\n+      \n     \n     \n linked_list = LinkedList(3)\n print(linked_list.head.next)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639041119162,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n   def append(self, data) :\n     self.head.next = Node(data)\n     \n     cur = self.head\n-    while cur.next == None :\n+    while cur.next is not None :\n       \n     \n     \n linked_list = LinkedList(3)\n"
+                },
+                {
+                    "date": 1639041132077,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,9 @@\n     self.head.next = Node(data)\n     \n     cur = self.head\n     while cur.next is not None :\n+      cur = cur.next\n       \n     \n     \n linked_list = LinkedList(3)\n"
+                },
+                {
+                    "date": 1639041142876,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     \n     cur = self.head\n     while cur.next is not None :\n       cur = cur.next\n-      \n+    cur.next = Node(data)\n     \n     \n linked_list = LinkedList(3)\n print(linked_list.head.next)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639041231143,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     \n     cur = self.head\n     while cur.next is not None :\n       cur = cur.next\n-    cur.next = Node(data)\n+    cur.next = Node(data) \n     \n     \n linked_list = LinkedList(3)\n print(linked_list.head.next)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639041269133,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,14 +14,18 @@\n   def __init__(self, data) :\n     self.head = Node(data)\n   \n   def append(self, data) :\n+    if self.head is None :\n+      self.head = Node(data)\n+      return\n+    \n     self.head.next = Node(data)\n     \n     cur = self.head\n     while cur.next is not None :\n       cur = cur.next\n-    cur.next = Node(data) \n+    cur.next = Node(data)  \n     \n     \n linked_list = LinkedList(3)\n print(linked_list.head.next)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639041321093,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,8 +21,9 @@\n     \n     self.head.next = Node(data)\n     \n     cur = self.head\n+    \n     while cur.next is not None :\n       cur = cur.next\n     cur.next = Node(data)  \n     \n"
+                },
+                {
+                    "date": 1639041336249,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n     \n     self.head.next = Node(data)\n     \n     cur = self.head\n-    \n+    print('cur is', cur.data)\n     while cur.next is not None :\n       cur = cur.next\n     cur.next = Node(data)  \n     \n"
+                },
+                {
+                    "date": 1639041358345,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,5 +28,6 @@\n     cur.next = Node(data)  \n     \n     \n linked_list = LinkedList(3)\n+\n print(linked_list.head.next)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639041373454,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,6 +28,7 @@\n     cur.next = Node(data)  \n     \n     \n linked_list = LinkedList(3)\n-\n+LinkedList.append(4)\n+LinkedList.append(5)\n print(linked_list.head.next)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639041382332,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,5 +30,5 @@\n     \n linked_list = LinkedList(3)\n LinkedList.append(4)\n LinkedList.append(5)\n-print(linked_list.head.next)\n\\ No newline at end of file\n+print(linked_list.data)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639047251363,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,7 +28,7 @@\n     cur.next = Node(data)  \n     \n     \n linked_list = LinkedList(3)\n-LinkedList.append(4)\n-LinkedList.append(5)\n+linked_list.append(4)\n+linked_list.append(5)\n print(linked_list.data)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639047277937,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,11 +21,11 @@\n     \n     self.head.next = Node(data)\n     \n     cur = self.head\n-    print('cur is', cur.data)\n     while cur.next is not None :\n       cur = cur.next\n+      print('cur is', cur.data)\n     cur.next = Node(data)  \n     \n     \n linked_list = LinkedList(3)\n"
+                },
+                {
+                    "date": 1639047284319,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,6 +29,5 @@\n     \n     \n linked_list = LinkedList(3)\n linked_list.append(4)\n-linked_list.append(5)\n-print(linked_list.data)\n\\ No newline at end of file\n+linked_list.append(5)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639047316453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,8 @@\n     if self.head is None :\n       self.head = Node(data)\n       return\n     \n-    self.head.next = Node(data)\n     \n     cur = self.head\n     while cur.next is not None :\n       cur = cur.next\n"
+                },
+                {
+                    "date": 1639047452715,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,11 @@\n       cur = cur.next\n       print('cur is', cur.data)\n     cur.next = Node(data)  \n     \n+  def print_all (self) :\n     \n+    \n+    \n linked_list = LinkedList(3)\n linked_list.append(4)\n linked_list.append(5)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639047468029,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,8 +26,9 @@\n       print('cur is', cur.data)\n     cur.next = Node(data)  \n     \n   def print_all (self) :\n+    print('hihihi')\n     \n     \n     \n linked_list = LinkedList(3)\n"
+                },
+                {
+                    "date": 1639047539347,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,7 +30,10 @@\n     print('hihihi')\n     \n     \n     \n+    \n linked_list = LinkedList(3)\n linked_list.append(4)\n\\ No newline at end of file\n-linked_list.append(5)\n+linked_list.append(5)\n+linked_list.append(6)\n+linked_list.append(7)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639047586981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,12 +27,14 @@\n     cur.next = Node(data)  \n     \n   def print_all (self) :\n     print('hihihi')\n+    cur = self.head\n+    while cur is not None :\n+      print(cur)\n     \n     \n     \n-    \n linked_list = LinkedList(3)\n linked_list.append(4)\n linked_list.append(5)\n linked_list.append(6)\n"
+                },
+                {
+                    "date": 1639047598121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,8 @@\n     \n     cur = self.head\n     while cur.next is not None :\n       cur = cur.next\n-      print('cur is', cur.data)\n     cur.next = Node(data)  \n     \n   def print_all (self) :\n     print('hihihi')\n"
+                },
+                {
+                    "date": 1639047633692,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,10 @@\n   def print_all (self) :\n     print('hihihi')\n     cur = self.head\n     while cur is not None :\n-      print(cur)\n+      print(cur.data)\n+      cur = cur.next\n     \n     \n     \n linked_list = LinkedList(3)\n"
+                },
+                {
+                    "date": 1639047684528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,5 +37,6 @@\n linked_list = LinkedList(3)\n linked_list.append(4)\n linked_list.append(5)\n linked_list.append(6)\n-linked_list.append(7)\n\\ No newline at end of file\n+linked_list.append(7)\n+linked_list.print_all()\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1639040345669,
+            "name": "Commit-0",
+            "content": "# [3] -> [4]\n# "
+        }
+    ]
+}

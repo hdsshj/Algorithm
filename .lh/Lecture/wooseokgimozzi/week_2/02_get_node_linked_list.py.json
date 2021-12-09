@@ -1,0 +1,98 @@
+{
+    "sourceFile": "Lecture/wooseokgimozzi/week_2/02_get_node_linked_list.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 20,
+            "patches": [
+                {
+                    "date": 1639047796180,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1639047838076,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,5 +24,5 @@\n         return \"index 번째 노드를 반환해보세요!\"\n \n linked_list = LinkedList(5)\n linked_list.append(12)\n-linked_list.get_node(0) # -> 5를 들고 있는 노드를 반환해야 합니다!\n\\ No newline at end of file\n+print(linked_list.get_node(0)) # -> 5를 들고 있는 노드를 반환해야 합니다!\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639048019887,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,15 @@\n             print(cur.data)\n             cur = cur.next\n \n     def get_node(self, index):\n+      cur = self.head\n+      idx = 0\n+      while idx == index :\n+        idx += idx\n+        print(cur.data)\n\\ No newline at end of file\n+        \n         return \"index 번째 노드를 반환해보세요!\"\n \n linked_list = LinkedList(5)\n linked_list.append(12)\n-print(linked_list.get_node(0)) # -> 5를 들고 있는 노드를 반환해야 합니다!\n+print(linked_list.get_node(2)) # -> 5를 들고 있는 노드를 반환해야 합니다!\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639048072137,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n       while idx == index :\n         idx += idx\n         print(cur.data)\n         \n-        return \"index 번째 노드를 반환해보세요!\"\n \n linked_list = LinkedList(5)\n linked_list.append(12)\n+linked_list.print_all()\n print(linked_list.get_node(2)) # -> 5를 들고 있는 노드를 반환해야 합니다!\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639048079926,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,5 +30,5 @@\n \n linked_list = LinkedList(5)\n linked_list.append(12)\n linked_list.print_all()\n-print(linked_list.get_node(2)) # -> 5를 들고 있는 노드를 반환해야 합니다!\n\\ No newline at end of file\n+print(linked_list.get_node(1)) # -> 5를 들고 있는 노드를 반환해야 합니다!\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639048091672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,12 +23,12 @@\n     def get_node(self, index):\n       cur = self.head\n       idx = 0\n       while idx == index :\n-        idx += idx\n+        idx += 1\n         print(cur.data)\n         \n \n linked_list = LinkedList(5)\n linked_list.append(12)\n linked_list.print_all()\n\\ No newline at end of file\n-print(linked_list.get_node(1)) # -> 5를 들고 있는 노드를 반환해야 합니다!\n+print(linked_list.get_node(2)) # -> 5를 들고 있는 노드를 반환해야 합니다!\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639048103320,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,9 @@\n       cur = self.head\n       idx = 0\n       while idx == index :\n         idx += 1\n+        print(idx)\n         print(cur.data)\n         \n \n linked_list = LinkedList(5)\n"
+                },
+                {
+                    "date": 1639048112848,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,5 +31,5 @@\n \n linked_list = LinkedList(5)\n linked_list.append(12)\n linked_list.print_all()\n-print(linked_list.get_node(2)) # -> 5를 들고 있는 노드를 반환해야 합니다!\n\\ No newline at end of file\n+linked_list.get_node(2) # -> 5를 들고 있는 노드를 반환해야 합니다!\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639048128077,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,12 +22,13 @@\n \n     def get_node(self, index):\n       cur = self.head\n       idx = 0\n+      print(index)\n       while idx == index :\n         idx += 1\n         print(idx)\n-        print(cur.data)\n+        # print(cur.data)\n         \n \n linked_list = LinkedList(5)\n linked_list.append(12)\n"
+                },
+                {
+                    "date": 1639048138090,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n     def get_node(self, index):\n       cur = self.head\n       idx = 0\n       print(index)\n-      while idx == index :\n+      while idx <= index :\n         idx += 1\n         print(idx)\n         # print(cur.data)\n         \n"
+                },
+                {
+                    "date": 1639048148305,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n     def get_node(self, index):\n       cur = self.head\n       idx = 0\n       print(index)\n-      while idx <= index :\n+      while idx >= index :\n         idx += 1\n         print(idx)\n         # print(cur.data)\n         \n"
+                },
+                {
+                    "date": 1639048157758,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n     def get_node(self, index):\n       cur = self.head\n       idx = 0\n       print(index)\n-      while idx >= index :\n+      while idx <= index :\n         idx += 1\n         print(idx)\n         # print(cur.data)\n         \n"
+                },
+                {
+                    "date": 1639048184397,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,10 +24,10 @@\n       cur = self.head\n       idx = 0\n       print(index)\n       while idx <= index :\n+        print(idx)\n         idx += 1\n-        print(idx)\n         # print(cur.data)\n         \n \n linked_list = LinkedList(5)\n"
+                },
+                {
+                    "date": 1639048193303,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,10 +25,10 @@\n       idx = 0\n       print(index)\n       while idx <= index :\n         print(idx)\n+        print(cur.data)\n         idx += 1\n-        # print(cur.data)\n         \n \n linked_list = LinkedList(5)\n linked_list.append(12)\n"
+                },
+                {
+                    "date": 1639048221879,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,10 +24,10 @@\n       cur = self.head\n       idx = 0\n       print(index)\n       while idx <= index :\n-        print(idx)\n-        print(cur.data)\n+        if idx == index :\n+          print(cur.data)\n         idx += 1\n         \n \n linked_list = LinkedList(5)\n"
+                },
+                {
+                    "date": 1639048314938,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,8 @@\n \n     def get_node(self, index):\n       cur = self.head\n       idx = 0\n-      print(index)\n       while idx <= index :\n         if idx == index :\n           print(cur.data)\n         idx += 1\n@@ -32,5 +31,5 @@\n \n linked_list = LinkedList(5)\n linked_list.append(12)\n linked_list.print_all()\n-linked_list.get_node(2) # -> 5를 들고 있는 노드를 반환해야 합니다!\n\\ No newline at end of file\n+linked_list.get_node(1) # -> 5를 들고 있는 노드를 반환해야 합니다!\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639048334097,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,14 +22,14 @@\n \n     def get_node(self, index):\n       cur = self.head\n       idx = 0\n-      while idx <= index :\n+      while idx < index :\n         if idx == index :\n           print(cur.data)\n         idx += 1\n         \n \n linked_list = LinkedList(5)\n linked_list.append(12)\n linked_list.print_all()\n\\ No newline at end of file\n-linked_list.get_node(1) # -> 5를 들고 있는 노드를 반환해야 합니다!\n+linked_list.get_node(0) # -> 5를 들고 있는 노드를 반환해야 합니다!\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639048355372,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n     def get_node(self, index):\n       cur = self.head\n       idx = 0\n       while idx < index :\n-        if idx == index :\n+        cur = self.next\n           print(cur.data)\n         idx += 1\n         \n \n"
+                },
+                {
+                    "date": 1639048384132,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,11 +23,11 @@\n     def get_node(self, index):\n       cur = self.head\n       idx = 0\n       while idx < index :\n-        cur = self.next\n-          print(cur.data)\n+        cur = cur.next\n         idx += 1\n+      return cur\n         \n \n linked_list = LinkedList(5)\n linked_list.append(12)\n"
+                },
+                {
+                    "date": 1639048400912,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,5 +31,5 @@\n \n linked_list = LinkedList(5)\n linked_list.append(12)\n linked_list.print_all()\n-linked_list.get_node(0) # -> 5를 들고 있는 노드를 반환해야 합니다!\n\\ No newline at end of file\n+print(linked_list.get_node(0)) # -> 5를 들고 있는 노드를 반환해야 합니다!\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639048408447,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,5 +31,5 @@\n \n linked_list = LinkedList(5)\n linked_list.append(12)\n linked_list.print_all()\n-print(linked_list.get_node(0)) # -> 5를 들고 있는 노드를 반환해야 합니다!\n\\ No newline at end of file\n+print(linked_list.get_node(1).data) # -> 5를 들고 있는 노드를 반환해야 합니다!\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1639047796180,
+            "name": "Commit-0",
+            "content": "class Node:\n    def __init__(self, data):\n        self.data = data\n        self.next = None\n\n\nclass LinkedList:\n    def __init__(self, value):\n        self.head = Node(value)\n\n    def append(self, value):\n        cur = self.head\n        while cur.next is not None:\n            cur = cur.next\n        cur.next = Node(value)\n\n    def print_all(self):\n        cur = self.head\n        while cur is not None:\n            print(cur.data)\n            cur = cur.next\n\n    def get_node(self, index):\n        return \"index 번째 노드를 반환해보세요!\"\n\nlinked_list = LinkedList(5)\nlinked_list.append(12)\nlinked_list.get_node(0) # -> 5를 들고 있는 노드를 반환해야 합니다!"
+        }
+    ]
+}

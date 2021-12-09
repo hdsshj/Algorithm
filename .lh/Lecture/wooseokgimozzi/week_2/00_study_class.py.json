@@ -1,0 +1,62 @@
+{
+    "sourceFile": "Lecture/wooseokgimozzi/week_2/00_study_class.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1639039458556,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1639039500761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,7 @@\n class Person :\n-  pass\n\\ No newline at end of file\n+  pass\n+\n+person1 = Person()\n+print(person1)\n+person2 = Person()\n+print(person2)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639039560422,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n class Person :\n+  def __init__(self) -> None:\n+      pass\n   pass\n \n person1 = Person()\n print(person1)\n"
+                },
+                {
+                    "date": 1639039592487,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,7 @@\n class Person :\n-  def __init__(self) -> None:\n-      pass\n-  pass\n-\n+  def __init__(self):\n+    print(i am )\n person1 = Person()\n print(person1)\n person2 = Person()\n print(person2)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639039602049,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n class Person :\n   def __init__(self):\n-    print(i am )\n+    print(\"i am created\")\n person1 = Person()\n print(person1)\n person2 = Person()\n print(person2)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639039614237,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n class Person :\n   def __init__(self):\n-    print(\"i am created\")\n+    print(\"i am created\", self)\n person1 = Person()\n print(person1)\n person2 = Person()\n print(person2)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639039754055,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n class Person :\n-  def __init__(self):\n+  def __init__(self, param_name):\n     print(\"i am created\", self)\n-person1 = Person()\n+    self.name = param_name\n+person1 = Person('우서크')\n print(person1)\n-person2 = Person()\n+person2 = Person('준서크')\n print(person2)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639039771521,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,7 +2,7 @@\n   def __init__(self, param_name):\n     print(\"i am created\", self)\n     self.name = param_name\n person1 = Person('우서크')\n-print(person1)\n+print(person1.name)\n person2 = Person('준서크')\n\\ No newline at end of file\n-print(person2)\n+print(person2.name)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639039963162,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,11 @@\n class Person :\n   def __init__(self, param_name):\n     print(\"i am created\", self)\n     self.name = param_name\n+    \n+  def talk(self) :\n+    print('안녕 하세요, 제 이름은', name, '입니다.' )\n person1 = Person('우서크')\n print(person1.name)\n person2 = Person('준서크')\n print(person2.name)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639039985780,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,6 +6,8 @@\n   def talk(self) :\n     print('안녕 하세요, 제 이름은', name, '입니다.' )\n person1 = Person('우서크')\n print(person1.name)\n+person1.talk()\n person2 = Person('준서크')\n\\ No newline at end of file\n-print(person2.name)\n+print(person2.name)\n+person2.talk()\n"
+                },
+                {
+                    "date": 1639039993321,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,11 +3,11 @@\n     print(\"i am created\", self)\n     self.name = param_name\n     \n   def talk(self) :\n-    print('안녕 하세요, 제 이름은', name, '입니다.' )\n+    print('안녕 하세요, 제 이름은', param_name, '입니다.' )\n person1 = Person('우서크')\n print(person1.name)\n person1.talk()\n person2 = Person('준서크')\n print(person2.name)\n\\ No newline at end of file\n-person2.talk()\n+person2.talk()\n"
+                },
+                {
+                    "date": 1639040003242,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,11 +3,11 @@\n     print(\"i am created\", self)\n     self.name = param_name\n     \n   def talk(self) :\n-    print('안녕 하세요, 제 이름은', param_name, '입니다.' )\n+    print('안녕 하세요, 제 이름은', self.name, '입니다.' )\n person1 = Person('우서크')\n print(person1.name)\n person1.talk()\n person2 = Person('준서크')\n print(person2.name)\n\\ No newline at end of file\n-person2.talk()\n+person2.talk()\n"
+                }
+            ],
+            "date": 1639039458556,
+            "name": "Commit-0",
+            "content": "class Person :\n  pass"
+        }
+    ]
+}

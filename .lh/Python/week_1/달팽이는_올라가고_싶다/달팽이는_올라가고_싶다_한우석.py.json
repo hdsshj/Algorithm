@@ -1,0 +1,54 @@
+{
+    "sourceFile": "Python/week_1/달팽이는_올라가고_싶다/달팽이는_올라가고_싶다_한우석.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1638883990209,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1638884017037,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n # 2 - 2 = 0\n a,b,v = map(int,input().split())\n \n def finish_day_count(A, B, V) :\n-k = (v-b)/(a-b)\n-print(int(k) if k == int(k) else int(k)+1)\n+  k = (v-b)/(a-b)\n+  print(int(k) if k == int(k) else int(k)+1)\n   print(finish_day)\n   \n finish_day_count(A, B, V)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638884031259,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n # 5 - (2 - 1) = 4\n # 4 - (2 - 1) = 3\n # 3 - (2 - 1) = 2\n # 2 - 2 = 0\n-a,b,v = map(int,input().split())\n+A,B,V = map(int,input().split())\n \n def finish_day_count(A, B, V) :\n   k = (v-b)/(a-b)\n   print(int(k) if k == int(k) else int(k)+1)\n"
+                },
+                {
+                    "date": 1638884098215,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,10 @@\n # 2 - 2 = 0\n A,B,V = map(int,input().split())\n \n def finish_day_count(A, B, V) :\n-  k = (v-b)/(a-b)\n+  day_count = 0 \n+  day_count = (V-B)/(A-B)\n   print(int(k) if k == int(k) else int(k)+1)\n-  print(finish_day)\n+  print(day_count)\n   \n finish_day_count(A, B, V)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638884111961,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,8 @@\n \n def finish_day_count(A, B, V) :\n   day_count = 0 \n   day_count = (V-B)/(A-B)\n-  print(int(k) if k == int(k) else int(k)+1)\n+  print(int(day_count) if day_count == int(day_count) else int(day_count)+1)\n   print(day_count)\n   \n finish_day_count(A, B, V)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638884185202,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,7 +13,6 @@\n def finish_day_count(A, B, V) :\n   day_count = 0 \n   day_count = (V-B)/(A-B)\n   print(int(day_count) if day_count == int(day_count) else int(day_count)+1)\n-  print(day_count)\n   \n finish_day_count(A, B, V)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638884293129,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,5 +14,5 @@\n   day_count = 0 \n   day_count = (V-B)/(A-B)\n   print(int(day_count) if day_count == int(day_count) else int(day_count)+1)\n   \n-finish_day_count(A, B, V)\n\\ No newline at end of file\n+print(finish_day_count(A, B, V))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638885596053,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,12 @@\n # 2 - 2 = 0\n A,B,V = map(int,input().split())\n \n def finish_day_count(A, B, V) :\n-  day_count = 0 \n-  day_count = (V-B)/(A-B)\n-  print(int(day_count) if day_count == int(day_count) else int(day_count)+1)\n-  \n+  if A >= V :\n+    return 1\n+  else :\n+    num = V - B # 마지막엔 떨어지는걸 신경쓰지 않으니 떨어지는 거리를 뺌\n+    step = A - B # 하루에 가는 거리\n+    day_count = num // step\n+    return day_count\n print(finish_day_count(A, B, V))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638885694119,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,7 +15,11 @@\n     return 1\n   else :\n     num = V - B # 마지막엔 떨어지는걸 신경쓰지 않으니 떨어지는 거리를 뺌\n     step = A - B # 하루에 가는 거리\n-    day_count = num // step\n-    return day_count\n+    if num%step != 0 :\n+      day_count = (num // step) + 1\n+      return day_count\n+    else :\n+      day_count = num // step\n+      return day_count\n print(finish_day_count(A, B, V))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638885852672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,13 +13,13 @@\n def finish_day_count(A, B, V) :\n   if A >= V :\n     return 1\n   else :\n-    num = V - B # 마지막엔 떨어지는걸 신경쓰지 않으니 떨어지는 거리를 뺌\n+    height = V - B # 마지막엔 떨어지는걸 신경쓰지 않으니 떨어지는 거리를 뺌\n     step = A - B # 하루에 가는 거리\n-    if num%step != 0 :\n-      day_count = (num // step) + 1\n+    if height%step != 0 : # 하루에 올라가는 거리로 나누어 떨어지지 않으면 ex) 4.n 일\n+      day_count = (height // step) + 1 # 몫에 1을 더함\n       return day_count\n     else :\n-      day_count = num // step\n+      day_count = height // step # 나누어 떨어지면 그냥 몫을 바로 출력\n       return day_count\n print(finish_day_count(A, B, V))\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1638883990209,
+            "name": "Commit-0",
+            "content": "# 땅 위에 달팽이가 있다. 이 달팽이는 높이가 V미터인 나무 막대를 올라갈 것이다.\n# 달팽이는 낮에 A미터 올라갈 수 있다. 하지만, 밤에 잠을 자는 동안 B미터 미끄러진다. 또, 정상에 올라간 후에는 미끄러지지 않는다.\n# 달팽이가 나무 막대를 모두 올라가려면, 며칠이 걸리는지 구하는 프로그램을 작성하시오.\n# 높이 V, 낮 +A, 밤 -B\n# A, B, V\n# 2 1 5\n# 5 - (2 - 1) = 4\n# 4 - (2 - 1) = 3\n# 3 - (2 - 1) = 2\n# 2 - 2 = 0\na,b,v = map(int,input().split())\n\ndef finish_day_count(A, B, V) :\nk = (v-b)/(a-b)\nprint(int(k) if k == int(k) else int(k)+1)\n  print(finish_day)\n  \nfinish_day_count(A, B, V)"
+        }
+    ]
+}

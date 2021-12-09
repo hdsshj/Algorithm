@@ -1,0 +1,22 @@
+{
+    "sourceFile": "Lecture/wooseokgimozzi/CT/01_방금그곡.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1639012546206,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1639012618951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,8 +21,10 @@\n         # 올림(실행시간 / 멜로디길이)\n         melody_count = math.ceil(play_time / len(melody))\n         melody_played = (melody * melody_count)[:play_time]\n         \n+        # max_play_time 끼면 80점, 빼면 90점\n+        # 문제점 찾아야함\n         if m in melody_played and play_time > max_play_time:\n             answer = name\n             max_play_time = play_time\n     if answer is None :\n"
+                }
+            ],
+            "date": 1639012546206,
+            "name": "Commit-0",
+            "content": "# 입력\n#   네오가 기억하는 멜로디를 담은 문자열 m\n#   방송된 곡의 정보를 담고 있는 배열 musicinfos\n# 처리\n#\n# 출력\n#   \nimport math\n\ndef replace_string (m) :\n    return m.replace('C#', 'c').replace('D#', 'd').replace('F#', 'f').replace('G#', 'g').replace('A#', 'a')\n\ndef solution(m, musicinfos):\n    answer = None\n    max_play_time = 0\n    m = replace_string(m)\n    for musicinfo in musicinfos:\n        start_time, end_time, name, melody = musicinfo.split(',')\n        play_time = int(end_time[:2]) * 60 + int(end_time[3:]) - int(start_time[:2]) * 60 + int(start_time[3:])\n        melody = replace_string(melody)\n        # 올림(실행시간 / 멜로디길이)\n        melody_count = math.ceil(play_time / len(melody))\n        melody_played = (melody * melody_count)[:play_time]\n        \n        if m in melody_played and play_time > max_play_time:\n            answer = name\n            max_play_time = play_time\n    if answer is None :\n        return \"(None)\"\n    \n    return answer"
+        }
+    ]
+}

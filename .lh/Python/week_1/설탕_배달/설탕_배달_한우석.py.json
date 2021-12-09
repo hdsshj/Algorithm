@@ -1,0 +1,214 @@
+{
+    "sourceFile": "Python/week_1/설탕_배달/설탕_배달_한우석.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 49,
+            "patches": [
+                {
+                    "date": 1638879310506,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1638879338957,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,9 @@\n   count_five_kg = 0\n   count_three_kg = 0\n \n   if N/5 < 0 :\n+    print('여긴 옴')\n     if N/3 < 0 :\n       return -1\n     else:\n       count_three_kg = N/3\n"
+                },
+                {
+                    "date": 1638879389121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,13 +18,13 @@\n def count_suger (number) :\n   count_five_kg = 0\n   count_three_kg = 0\n \n-  if N/5 < 0 :\n+  if number/5 < 0 :\n     print('여긴 옴')\n-    if N/3 < 0 :\n+    if number/3 < 0 :\n       return -1\n     else:\n-      count_three_kg = N/3\n+      count_three_kg = number/3\n       return count_three_kg\n \n print(count_suger(N))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638879436982,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,5 +26,6 @@\n     else:\n       count_three_kg = number/3\n       return count_three_kg\n \n-print(count_suger(N))\n\\ No newline at end of file\n+# print(count_suger(N))\n+print(N/5)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638879482801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,5 +27,5 @@\n       count_three_kg = number/3\n       return count_three_kg\n \n # print(count_suger(N))\n-print(N/5)\n\\ No newline at end of file\n+print(N/5 < 0)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638879503645,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,5 +27,5 @@\n       count_three_kg = number/3\n       return count_three_kg\n \n # print(count_suger(N))\n-print(N/5 < 0)\n\\ No newline at end of file\n+print(N/5 > 0)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638879525829,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,5 +27,5 @@\n       count_three_kg = number/3\n       return count_three_kg\n \n # print(count_suger(N))\n-print(N/5 > 0)\n\\ No newline at end of file\n+print(0.4 > 0)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638879547651,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,5 +27,5 @@\n       count_three_kg = number/3\n       return count_three_kg\n \n # print(count_suger(N))\n-print(0.4 > 0)\n\\ No newline at end of file\n+print(int(0.4) > 0)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638879555483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,5 +27,5 @@\n       count_three_kg = number/3\n       return count_three_kg\n \n # print(count_suger(N))\n-print(int(0.4) > 0)\n\\ No newline at end of file\n+print(int(0.4) < 0)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638879565651,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,5 +27,5 @@\n       count_three_kg = number/3\n       return count_three_kg\n \n # print(count_suger(N))\n-print(int(0.4) < 0)\n\\ No newline at end of file\n+print(int(0.4) > 0)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638879575689,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,5 +27,5 @@\n       count_three_kg = number/3\n       return count_three_kg\n \n # print(count_suger(N))\n-print(int(0.4) > 0)\n\\ No newline at end of file\n+print(int(0.4) > int(0))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638879582169,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,5 +27,5 @@\n       count_three_kg = number/3\n       return count_three_kg\n \n # print(count_suger(N))\n-print(int(0.4) > int(0))\n\\ No newline at end of file\n+print(int(0.4) < int(0))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638879693831,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,14 +18,13 @@\n def count_suger (number) :\n   count_five_kg = 0\n   count_three_kg = 0\n \n-  if number/5 < 0 :\n+  if number/5 < 1 :\n     print('여긴 옴')\n     if number/3 < 0 :\n       return -1\n     else:\n       count_three_kg = number/3\n       return count_three_kg\n \n-# print(count_suger(N))\n\\ No newline at end of file\n-print(int(0.4) < int(0))\n+print(count_suger(N))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638879713990,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   count_three_kg = 0\n \n   if number/5 < 1 :\n     print('여긴 옴')\n-    if number/3 < 0 :\n+    if number/3 < 1 :\n       return -1\n     else:\n       count_three_kg = number/3\n       return count_three_kg\n"
+                },
+                {
+                    "date": 1638879726745,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,13 +18,13 @@\n def count_suger (number) :\n   count_five_kg = 0\n   count_three_kg = 0\n \n-  if number/5 < 1 :\n+  if number//5 < 1 :\n     print('여긴 옴')\n-    if number/3 < 1 :\n+    if number//3 < 1 :\n       return -1\n     else:\n-      count_three_kg = number/3\n+      count_three_kg = number//3\n       return count_three_kg\n \n print(count_suger(N))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638879761572,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,8 @@\n   count_five_kg = 0\n   count_three_kg = 0\n \n   if number//5 < 1 :\n-    print('여긴 옴')\n     if number//3 < 1 :\n       return -1\n     else:\n       count_three_kg = number//3\n"
+                },
+                {
+                    "date": 1638879895163,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,6 +24,9 @@\n       return -1\n     else:\n       count_three_kg = number//3\n       return count_three_kg\n+  else :\n+    count_five_kg = number//5\n+    count_three_kg = (number%5)//3\n \n print(count_suger(N))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638880288112,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,7 +26,11 @@\n       count_three_kg = number//3\n       return count_three_kg\n   else :\n     count_five_kg = number//5\n+    if (number%5)%3 != 0 :\n+      return -1\n     count_three_kg = (number%5)//3\n+    all_suger_count =  count_five_kg + count_three_kg\n+    return all_suger_count\n \n print(count_suger(N))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638881140113,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,10 +26,8 @@\n       count_three_kg = number//3\n       return count_three_kg\n   else :\n     count_five_kg = number//5\n-    if (number%5)%3 != 0 :\n-      return -1\n     count_three_kg = (number%5)//3\n     all_suger_count =  count_five_kg + count_three_kg\n     return all_suger_count\n \n"
+                },
+                {
+                    "date": 1638881217306,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,8 +27,9 @@\n       return count_three_kg\n   else :\n     count_five_kg = number//5\n     count_three_kg = (number%5)//3\n+    if \n     all_suger_count =  count_five_kg + count_three_kg\n     return all_suger_count\n \n print(count_suger(N))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638881462571,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,8 +27,11 @@\n       return count_three_kg\n   else :\n     count_five_kg = number//5\n     count_three_kg = (number%5)//3\n+    if count_three_kg < 1 :\n+      count_three_kg += 1\n+      \n     if \n     all_suger_count =  count_five_kg + count_three_kg\n     return all_suger_count\n \n"
+                },
+                {
+                    "date": 1638881809408,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,24 +15,7 @@\n \n N = int(N)\n \n def count_suger (number) :\n-  count_five_kg = 0\n-  count_three_kg = 0\n+  \n \n-  if number//5 < 1 :\n-    if number//3 < 1 :\n-      return -1\n-    else:\n-      count_three_kg = number//3\n-      return count_three_kg\n-  else :\n-    count_five_kg = number//5\n-    count_three_kg = (number%5)//3\n-    if count_three_kg < 1 :\n-      count_three_kg += 1\n-      \n-    if \n-    all_suger_count =  count_five_kg + count_three_kg\n-    return all_suger_count\n-\n print(count_suger(N))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638882132684,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,17 @@\n N = input()\n \n N = int(N)\n \n-def count_suger (number) :\n-  \n+def count_suger (suger) :\n+  all_suger_count = 0\n+  while suger >= 0 :\n+    if suger % 5 != 0 :\n+      all_suger_count += 1\n+      suger - 3\n+    else : \n+      all_suger_count += 1\n+      break\n+  else :\n+    return -1\n \n print(count_suger(N))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638882217543,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,17 +14,17 @@\n N = input()\n \n N = int(N)\n \n-def count_suger (suger) :\n-  all_suger_count = 0\n-  while suger >= 0 :\n-    if suger % 5 != 0 :\n-      all_suger_count += 1\n-      suger - 3\n+def count_sugar (sugar) :\n+  all_sugar_count = 0\n+  while sugar >= 0 :\n+    if sugar % 5 != 0 :\n+      all_sugar_count += 1\n+      sugar - 3\n     else : \n\\ No newline at end of file\n-      all_suger_count += 1\n+      all_sugar_count += 1\n       break\n   else :\n     return -1\n \n-print(count_suger(N))\n+print(count_sugar(N))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638882412824,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n \n def count_sugar (sugar) :\n   all_sugar_count = 0\n   while sugar >= 0 :\n-    if sugar % 5 != 0 :\n+    if sugar % 5 == 0 :\n       all_sugar_count += 1\n       sugar - 3\n     else : \n       all_sugar_count += 1\n"
+                },
+                {
+                    "date": 1638882444504,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,10 +18,9 @@\n def count_sugar (sugar) :\n   all_sugar_count = 0\n   while sugar >= 0 :\n     if sugar % 5 == 0 :\n-      all_sugar_count += 1\n-      sugar - 3\n+      all_sugar_count = sugar // 5\n     else : \n       all_sugar_count += 1\n       break\n   else :\n"
+                },
+                {
+                    "date": 1638882494573,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,11 +19,9 @@\n   all_sugar_count = 0\n   while sugar >= 0 :\n     if sugar % 5 == 0 :\n       all_sugar_count = sugar // 5\n-    else : \n-      all_sugar_count += 1\n-      break\n+      \n   else :\n     return -1\n \n print(count_sugar(N))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638882541945,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,10 @@\n   all_sugar_count = 0\n   while sugar >= 0 :\n     if sugar % 5 == 0 :\n       all_sugar_count = sugar // 5\n-      \n+      return all_sugar_count\n+    \n   else :\n     return -1\n \n print(count_sugar(N))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638882568829,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,8 @@\n   while sugar >= 0 :\n     if sugar % 5 == 0 :\n       all_sugar_count = sugar // 5\n       return all_sugar_count\n-    \n   else :\n     return -1\n \n print(count_sugar(N))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638882603399,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,11 @@\n   all_sugar_count = 0\n   while sugar >= 0 :\n     if sugar % 5 == 0 :\n       all_sugar_count = sugar // 5\n-      return all_sugar_count\n+      print (all_sugar_count)\n+      break\n+    \n   else :\n     return -1\n \n print(count_sugar(N))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638882633793,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,10 @@\n     if sugar % 5 == 0 :\n       all_sugar_count = sugar // 5\n       print (all_sugar_count)\n       break\n-    \n+    sugar -= 3\n+    all_sugar_count += 1\n   else :\n     return -1\n \n print(count_sugar(N))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638882724107,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,7 +24,7 @@\n       break\n     sugar -= 3\n     all_sugar_count += 1\n   else :\n-    return -1\n+    print(-1)\n \n print(count_sugar(N))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638882740731,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,8 +23,9 @@\n       print (all_sugar_count)\n       break\n     sugar -= 3\n     all_sugar_count += 1\n+    print(all_sugar_count)\n   else :\n     print(-1)\n \n print(count_sugar(N))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638882788161,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,13 +19,12 @@\n   all_sugar_count = 0\n   while sugar >= 0 :\n     if sugar % 5 == 0 :\n       all_sugar_count = sugar // 5\n-      print (all_sugar_count)\n-      break\n+      return all_sugar_count\n     sugar -= 3\n     all_sugar_count += 1\n-    print(all_sugar_count)\n+    return all_sugar_count\n   else :\n-    print(-1)\n+    return -1\n \n print(count_sugar(N))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638882803377,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,8 @@\n       all_sugar_count = sugar // 5\n       return all_sugar_count\n     sugar -= 3\n     all_sugar_count += 1\n-    return all_sugar_count\n   else :\n     return -1\n \n print(count_sugar(N))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638882878955,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,10 +20,11 @@\n   while sugar >= 0 :\n     if sugar % 5 == 0 :\n       all_sugar_count = sugar // 5\n       return all_sugar_count\n-    sugar -= 3\n-    all_sugar_count += 1\n+    else : \n+      sugar -= 3\n+      all_sugar_count += 1\n   else :\n     return -1\n \n print(count_sugar(N))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638883087758,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,16 +15,18 @@\n \n N = int(N)\n \n def count_sugar (sugar) :\n+  6\n   all_sugar_count = 0\n   while sugar >= 0 :\n     if sugar % 5 == 0 :\n       all_sugar_count = sugar // 5\n       return all_sugar_count\n     else : \n       sugar -= 3\n       all_sugar_count += 1\n+      return all_sugar_count\n   else :\n     return -1\n \n print(count_sugar(N))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638883156215,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,15 +15,14 @@\n \n N = int(N)\n \n def count_sugar (sugar) :\n-  6\n   all_sugar_count = 0\n   while sugar >= 0 :\n     if sugar % 5 == 0 :\n       all_sugar_count = sugar // 5\n       return all_sugar_count\n-    else : \n+    elif sugar -3 >= 0 : \n       sugar -= 3\n       all_sugar_count += 1\n       return all_sugar_count\n   else :\n"
+                },
+                {
+                    "date": 1638883218871,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,13 +19,14 @@\n   all_sugar_count = 0\n   while sugar >= 0 :\n     if sugar % 5 == 0 :\n       all_sugar_count = sugar // 5\n-      return all_sugar_count\n+      print (all_sugar_count)\n+      break\n     elif sugar -3 >= 0 : \n       sugar -= 3\n       all_sugar_count += 1\n-      return all_sugar_count\n+      print(all_sugar_count)\n   else :\n     return -1\n \n print(count_sugar(N))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638883252076,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,7 +26,8 @@\n       sugar -= 3\n       all_sugar_count += 1\n       print(all_sugar_count)\n   else :\n-    return -1\n+    print(-1)\n+    break\n \n print(count_sugar(N))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638883266431,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n     elif sugar -3 >= 0 : \n       sugar -= 3\n       all_sugar_count += 1\n       print(all_sugar_count)\n-  else :\n-    print(-1)\n-    break\n+    else :\n+      print(-1)\n+      break\n \n print(count_sugar(N))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638883321704,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,10 +24,9 @@\n       break\n     elif sugar -3 >= 0 : \n       sugar -= 3\n       all_sugar_count += 1\n-      print(all_sugar_count)\n+      return all_sugar_count\n     else :\n-      print(-1)\n-      break\n+      return -1\n \n print(count_sugar(N))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638883374510,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,18 +15,16 @@\n \n N = int(N)\n \n def count_sugar (sugar) :\n-  all_sugar_count = 0\n+  bag = 0\n   while sugar >= 0 :\n-    if sugar % 5 == 0 :\n-      all_sugar_count = sugar // 5\n-      print (all_sugar_count)\n-      break\n-    elif sugar -3 >= 0 : \n-      sugar -= 3\n-      all_sugar_count += 1\n-      return all_sugar_count\n-    else :\n-      return -1\n+      if sugar % 5 == 0 :  # 5의 배수이면\n+          bag += (sugar // 5)  # 5로 나눈 몫을 구해야 정수가 됨\n+          print(bag)\n+          break\n+      sugar -= 3  \n+      bag += 1  # 5의 배수가 될 때까지 설탕-3, 봉지+1\n+  else :\n+      print(-1)\n \n print(count_sugar(N))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638883405621,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,16 +15,18 @@\n \n N = int(N)\n \n def count_sugar (sugar) :\n-  bag = 0\n+  all_sugar_count = 0\n   while sugar >= 0 :\n-      if sugar % 5 == 0 :  # 5의 배수이면\n-          bag += (sugar // 5)  # 5로 나눈 몫을 구해야 정수가 됨\n-          print(bag)\n-          break\n-      sugar -= 3  \n-      bag += 1  # 5의 배수가 될 때까지 설탕-3, 봉지+1\n-  else :\n-      print(-1)\n+    if sugar % 5 == 0 :\n+      all_sugar_count += sugar // 5\n+      print (all_sugar_count)\n+      break\n+    elif sugar -3 >= 0 : \n+      sugar -= 3\n+      all_sugar_count += 1\n+      return all_sugar_count\n+    else :\n+      return -1\n \n print(count_sugar(N))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638883430920,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,10 +19,9 @@\n   all_sugar_count = 0\n   while sugar >= 0 :\n     if sugar % 5 == 0 :\n       all_sugar_count += sugar // 5\n-      print (all_sugar_count)\n-      break\n+      return all_sugar_count\n     elif sugar -3 >= 0 : \n       sugar -= 3\n       all_sugar_count += 1\n       return all_sugar_count\n"
+                },
+                {
+                    "date": 1638883444523,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n def count_sugar (sugar) :\n   all_sugar_count = 0\n   while sugar >= 0 :\n     if sugar % 5 == 0 :\n-      all_sugar_count += sugar // 5\n+      all_sugar_count += (sugar // 5)\n       return all_sugar_count\n     elif sugar -3 >= 0 : \n       sugar -= 3\n       all_sugar_count += 1\n"
+                },
+                {
+                    "date": 1638883465527,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,14 +18,13 @@\n def count_sugar (sugar) :\n   all_sugar_count = 0\n   while sugar >= 0 :\n     if sugar % 5 == 0 :\n-      all_sugar_count += (sugar // 5)\n+      all_sugar_count += sugar // 5\n       return all_sugar_count\n-    elif sugar -3 >= 0 : \n-      sugar -= 3\n-      all_sugar_count += 1\n-      return all_sugar_count\n-    else :\n-      return -1\n+    sugar -= 3\n+    all_sugar_count += 1\n+    return all_sugar_count\n+  else :\n+    return -1\n \n print(count_sugar(N))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638883473936,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,8 @@\n       all_sugar_count += sugar // 5\n       return all_sugar_count\n     sugar -= 3\n     all_sugar_count += 1\n-    return all_sugar_count\n   else :\n     return -1\n \n print(count_sugar(N))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638883729349,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,8 @@\n # 입력 N 을 5로 나누고 나머지를 3으로 나눈다\n \n \n N = input()\n-\n N = int(N)\n \n def count_sugar (sugar) :\n   all_sugar_count = 0\n"
+                },
+                {
+                    "date": 1638883832429,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,14 +15,14 @@\n N = int(N)\n \n def count_sugar (sugar) :\n   all_sugar_count = 0\n-  while sugar >= 0 :\n-    if sugar % 5 == 0 :\n-      all_sugar_count += sugar // 5\n+  while sugar >= 0 :  \n+    if sugar % 5 == 0 : # 설탕이 5의 배수이면\n+      all_sugar_count += sugar // 5 # 5로 나눈 몫 만큼 카운터 증가\n       return all_sugar_count\n-    sugar -= 3\n-    all_sugar_count += 1\n+    sugar -= 3 # 5의 배수가 아니면 3을 빼고\n+    all_sugar_count += 1 # 카운터 하나 증가, 5의 배수가 될 때 까지 반복\n   else :\n     return -1\n \n print(count_sugar(N))\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1638879310506,
+            "name": "Commit-0",
+            "content": "# 상근이는 요즘 설탕공장에서 설탕을 배달하고 있다. \n# 상근이는 지금 사탕가게에 설탕을 정확하게 N킬로그램을 배달해야 한다. 설탕공장에서 만드는 설탕은 봉지에 담겨져 있다. 봉지는 3킬로그램 봉지와 5킬로그램 봉지가 있다.\n# 상근이는 귀찮기 때문에, 최대한 적은 봉지를 들고 가려고 한다. \n# 예를 들어, 18킬로그램 설탕을 배달해야 할 때, 3킬로그램 봉지 6개를 가져가도 되지만, \n# 5킬로그램 3개와 3킬로그램 1개를 배달하면, 더 적은 개수의 봉지를 배달할 수 있다.\n# 상근이가 설탕을 정확하게 N킬로그램 배달해야 할 때, 봉지 몇 개를 가져가면 되는지 그 수를 구하는 프로그램을 작성하시오.\n\n# 입력 : N\n# 출력 : 상근이가 배달하는 봉지의 최소 개수를 출력한다. 만약, 정확하게 N킬로그램을 만들 수 없다면 -1을 출력한다.\n\n# 입력 N 을 5로 나누고 나머지를 3으로 나눈다\n\n\nN = input()\n\nN = int(N)\n\ndef count_suger (number) :\n  count_five_kg = 0\n  count_three_kg = 0\n\n  if N/5 < 0 :\n    if N/3 < 0 :\n      return -1\n    else:\n      count_three_kg = N/3\n      return count_three_kg\n\nprint(count_suger(N))"
+        }
+    ]
+}

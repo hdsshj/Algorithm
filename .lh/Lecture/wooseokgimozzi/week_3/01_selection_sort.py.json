@@ -1,0 +1,70 @@
+{
+    "sourceFile": "Lecture/wooseokgimozzi/week_3/01_selection_sort.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 13,
+            "patches": [
+                {
+                    "date": 1639134312739,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1639134481539,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,12 @@\n input = [4, 6, 2, 9, 1]\n \n \n def selection_sort(array):\n-  \n-  for i in range()\n+  n = len(array)\n+  for i in range(n - 1) :\n+    for j in range(n) :\n+      print(j)\n   return\n \n \n selection_sort(input)\n"
+                },
+                {
+                    "date": 1639134502312,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \n def selection_sort(array):\n   n = len(array)\n   for i in range(n - 1) :\n-    for j in range(n) :\n+    for j in range(n -1 - i) :\n       print(j)\n   return\n \n \n"
+                },
+                {
+                    "date": 1639134696495,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n \n def selection_sort(array):\n   n = len(array)\n   for i in range(n - 1) :\n+    print('is i', i)\n     for j in range(n -1 - i) :\n       print(j)\n   return\n \n"
+                },
+                {
+                    "date": 1639134716297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n \n def selection_sort(array):\n   n = len(array)\n-  for i in range(n - 1) :\n+  for i in range(n) :\n     print('is i', i)\n     for j in range(n -1 - i) :\n       print(j)\n   return\n"
+                },
+                {
+                    "date": 1639134783585,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n def selection_sort(array):\n   n = len(array)\n   for i in range(n) :\n     print('is i', i)\n-    for j in range(n -1 - i) :\n+    for j in range(n - i) :\n       print(j)\n   return\n \n \n"
+                },
+                {
+                    "date": 1639135012775,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,11 +3,10 @@\n \n def selection_sort(array):\n   n = len(array)\n   for i in range(n) :\n-    print('is i', i)\n     for j in range(n - i) :\n-      print(j)\n+      if \n   return\n \n \n selection_sort(input)\n"
+                },
+                {
+                    "date": 1639135247330,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,8 @@\n \n \n def selection_sort(array):\n   n = len(array)\n-  for i in range(n) :\n     for j in range(n - i) :\n       if \n   return\n \n"
+                },
+                {
+                    "date": 1639135285761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,11 @@\n \n \n def selection_sort(array):\n   n = len(array)\n-    for j in range(n - i) :\n-      if \n+  for i in range(n - 1) :\n+    for j in range(n - i):\n+      print(i+j)\n   return\n \n \n selection_sort(input)\n"
+                },
+                {
+                    "date": 1639135323063,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n \n def selection_sort(array):\n   n = len(array)\n   for i in range(n - 1) :\n+    min_index = 0\n     for j in range(n - i):\n       print(i+j)\n   return\n \n"
+                },
+                {
+                    "date": 1639135393451,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,12 @@\n \n def selection_sort(array):\n   n = len(array)\n   for i in range(n - 1) :\n-    min_index = 0\n+    min_index = i\n     for j in range(n - i):\n+      if array[i + j] < array[min_index] :\n+        \n       print(i+j)\n   return\n \n \n"
+                },
+                {
+                    "date": 1639135410988,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   for i in range(n - 1) :\n     min_index = i\n     for j in range(n - i):\n       if array[i + j] < array[min_index] :\n-        \n+        min_index = i + j\n       print(i+j)\n   return\n \n \n"
+                },
+                {
+                    "date": 1639135433704,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n     for j in range(n - i):\n       if array[i + j] < array[min_index] :\n         min_index = i + j\n       print(i+j)\n+    \n   return\n \n \n selection_sort(input)\n"
+                },
+                {
+                    "date": 1639135469244,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     for j in range(n - i):\n       if array[i + j] < array[min_index] :\n         min_index = i + j\n       print(i+j)\n-    \n+    array[i + j], array[min_index] = array[min_index], array[i + j]\n   return\n \n \n selection_sort(input)\n"
+                }
+            ],
+            "date": 1639134312739,
+            "name": "Commit-0",
+            "content": "input = [4, 6, 2, 9, 1]\n\n\ndef selection_sort(array):\n  \n  for i in range()\n  return\n\n\nselection_sort(input)\nprint(input) # [1, 2, 4, 6, 9] 가 되어야 합니다!"
+        }
+    ]
+}

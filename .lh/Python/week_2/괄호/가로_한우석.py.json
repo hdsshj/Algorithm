@@ -1,0 +1,138 @@
+{
+    "sourceFile": "Python/week_2/괄호/가로_한우석.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 30,
+            "patches": [
+                {
+                    "date": 1639081538359,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1639081557896,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,7 +15,7 @@\n t = input()\n \n def check(t) :\n   for n in range(t) :\n-    print(n)\n+    return n\n   \n check(t)\n"
+                },
+                {
+                    "date": 1639081583701,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,8 @@\n \n t = input()\n \n def check(t) :\n-  for n in range(t) :\n+  for n in range(0,t+1) :\n     return n\n   \n check(t)\n"
+                },
+                {
+                    "date": 1639081608376,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,7 +15,7 @@\n t = input()\n \n def check(t) :\n   for n in range(0,t+1) :\n-    return n\n+    print(n)\n   \n check(t)\n"
+                },
+                {
+                    "date": 1639081620002,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,8 @@\n \n t = input()\n \n def check(t) :\n-  for n in range(0,t+1) :\n+  for n in range(3) :\n     print(n)\n   \n check(t)\n"
+                },
+                {
+                    "date": 1639081656037,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,10 +12,11 @@\n \n # 출력은 표준 출력을 사용한다. 만일 입력 괄호 문자열이 올바른 괄호 문자열(VPS)이면 “YES”, 아니면 “NO”를 한 줄에 하나씩 차례대로 출력해야 한다. \n \n t = input()\n+t = int(t)\n \n def check(t) :\n-  for n in range(3) :\n+  for n in range(t) :\n     print(n)\n   \n check(t)\n"
+                },
+                {
+                    "date": 1639081746104,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,7 +16,10 @@\n t = int(t)\n \n def check(t) :\n   for n in range(t) :\n-    print(n)\n+    \n+    check_count = 0\n+    \n+    \n   \n check(t)\n"
+                },
+                {
+                    "date": 1639081865177,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,10 +16,10 @@\n t = int(t)\n \n def check(t) :\n   for n in range(t) :\n+    paren.map(int, input().split)\n+    paren_check = 0\n+\n     \n-    check_count = 0\n-    \n-    \n   \n check(t)\n"
+                },
+                {
+                    "date": 1639082270061,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,10 @@\n t = int(t)\n \n def check(t) :\n   for n in range(t) :\n-    paren.map(int, input().split)\n+    paren = input()\n+    paren = int(parenQ)\n     paren_check = 0\n \n     \n   \n"
+                },
+                {
+                    "date": 1639159165268,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,10 +17,11 @@\n \n def check(t) :\n   for n in range(t) :\n     paren = input()\n-    paren = int(parenQ)\n+    paren = int(paren)\n     paren_check = 0\n+    if \n \n     \n   \n check(t)\n"
+                },
+                {
+                    "date": 1639161389594,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   for n in range(t) :\n     paren = input()\n     paren = int(paren)\n     paren_check = 0\n-    if \n+    print(paren)\n \n     \n   \n check(t)\n"
+                },
+                {
+                    "date": 1639161407039,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n \n def check(t) :\n   for n in range(t) :\n     paren = input()\n-    paren = int(paren)\n+    # paren = int(paren)\n     paren_check = 0\n     print(paren)\n \n     \n"
+                },
+                {
+                    "date": 1639161485911,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,11 +17,11 @@\n \n def check(t) :\n   for n in range(t) :\n     paren = input()\n-    # paren = int(paren)\n     paren_check = 0\n-    print(paren)\n-\n+    if paren == '(' :\n+      paren_check += 1\n     \n+    \n   \n check(t)\n"
+                },
+                {
+                    "date": 1639161618049,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,14 @@\n     paren = input()\n     paren_check = 0\n     if paren == '(' :\n       paren_check += 1\n+    elif paren == ')' :\n+      paren_check -= 1\n+    elif paren_check < 0 :\n+      return \"NO\"\n+  \n+  else :\n+    return \"YES\"\n     \n-    \n   \n check(t)\n"
+                },
+                {
+                    "date": 1639161649172,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,5 +29,5 @@\n   else :\n     return \"YES\"\n     \n   \n-check(t)\n+print(check(t))\n"
+                },
+                {
+                    "date": 1639161700902,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,12 +22,10 @@\n     if paren == '(' :\n       paren_check += 1\n     elif paren == ')' :\n       paren_check -= 1\n-    elif paren_check < 0 :\n-      return \"NO\"\n-  \n+  if paren_check < 0 :\n+    return \"NO\"\n   else :\n     return \"YES\"\n-    \n   \n print(check(t))\n"
+                },
+                {
+                    "date": 1639164347948,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,15 +17,17 @@\n \n def check(t) :\n   for n in range(t) :\n     paren = input()\n+    paren_list = list(paren)\n     paren_check = 0\n-    if paren == '(' :\n-      paren_check += 1\n-    elif paren == ')' :\n-      paren_check -= 1\n-  if paren_check < 0 :\n-    return \"NO\"\n+    for i in paren_list :\n+      if i == '(' :\n+        paren_check += 1\n+      elif i == ')' :\n+        paren_check -= 1\n+      elif paren_check < 0 :\n+        return \"NO\"\n   else :\n     return \"YES\"\n   \n print(check(t))\n"
+                },
+                {
+                    "date": 1639164391489,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,10 +24,10 @@\n       if i == '(' :\n         paren_check += 1\n       elif i == ')' :\n         paren_check -= 1\n-      elif paren_check < 0 :\n-        return \"NO\"\n-  else :\n-    return \"YES\"\n+    if paren_check != 0 :\n+      return \"NO\"\n+    else :\n+      return \"YES\"\n   \n print(check(t))\n"
+                },
+                {
+                    "date": 1639164431537,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,10 +24,10 @@\n       if i == '(' :\n         paren_check += 1\n       elif i == ')' :\n         paren_check -= 1\n-    if paren_check != 0 :\n+    if paren_check == 0 :\n+      return \"YES\"\n+    else :\n       return \"NO\"\n-    else :\n-      return \"YES\"\n   \n print(check(t))\n"
+                },
+                {
+                    "date": 1639164822625,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,9 @@\n def check(t) :\n   for n in range(t) :\n     paren = input()\n     paren_list = list(paren)\n+    print(paren_list)\n     paren_check = 0\n     for i in paren_list :\n       if i == '(' :\n         paren_check += 1\n"
+                },
+                {
+                    "date": 1639164852092,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,10 +25,10 @@\n       if i == '(' :\n         paren_check += 1\n       elif i == ')' :\n         paren_check -= 1\n-    if paren_check == 0 :\n-      return \"YES\"\n-    else :\n-      return \"NO\"\n+  if paren_check == 0 :\n+    return \"YES\"\n+  else :\n+    return \"NO\"\n   \n print(check(t))\n"
+                },
+                {
+                    "date": 1639165112841,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,10 +25,10 @@\n       if i == '(' :\n         paren_check += 1\n       elif i == ')' :\n         paren_check -= 1\n-  if paren_check == 0 :\n-    return \"YES\"\n-  else :\n-    return \"NO\"\n+    if paren_check == 0 :\n+      return \"YES\"\n+    else :\n+      return \"NO\"\n   \n print(check(t))\n"
+                },
+                {
+                    "date": 1639165384531,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n         paren_check += 1\n       elif i == ')' :\n         paren_check -= 1\n     if paren_check == 0 :\n-      return \"YES\"\n+      print(\"YES\")\n     else :\n-      return \"NO\"\n+      print(\"NO\")\n   \n print(check(t))\n"
+                },
+                {
+                    "date": 1639165391587,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,5 +30,5 @@\n       print(\"YES\")\n     else :\n       print(\"NO\")\n   \n-print(check(t))\n+check(t)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639165420143,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,5 +30,5 @@\n       print(\"YES\")\n     else :\n       print(\"NO\")\n   \n-check(t)\n\\ No newline at end of file\n+print(check(t))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639165933541,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,5 +30,5 @@\n       print(\"YES\")\n     else :\n       print(\"NO\")\n   \n-print(check(t))\n\\ No newline at end of file\n+check(t)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639165953372,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,8 @@\n def check(t) :\n   for n in range(t) :\n     paren = input()\n     paren_list = list(paren)\n-    print(paren_list)\n     paren_check = 0\n     for i in paren_list :\n       if i == '(' :\n         paren_check += 1\n"
+                },
+                {
+                    "date": 1639166089186,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,5 +29,5 @@\n       print(\"YES\")\n     else :\n       print(\"NO\")\n   \n-check(t)\n\\ No newline at end of file\n+check(t)\n"
+                },
+                {
+                    "date": 1639166250455,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,10 +24,13 @@\n       if i == '(' :\n         paren_check += 1\n       elif i == ')' :\n         paren_check -= 1\n+      elif paren_check < 0:\n+          print(\"NO\")\n+          break\n     if paren_check == 0 :\n       print(\"YES\")\n     else :\n       print(\"NO\")\n   \n-check(t)\n+check(t)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639166269793,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n       if i == '(' :\n         paren_check += 1\n       elif i == ')' :\n         paren_check -= 1\n-      elif paren_check < 0:\n+      if paren_check < 0:\n           print(\"NO\")\n           break\n     if paren_check == 0 :\n       print(\"YES\")\n"
+                },
+                {
+                    "date": 1639166316376,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,8 +29,8 @@\n           print(\"NO\")\n           break\n     if paren_check == 0 :\n       print(\"YES\")\n-    else :\n+    elif paren_check > 0 :\n       print(\"NO\")\n   \n check(t)\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1639081538359,
+            "name": "Commit-0",
+            "content": "# 괄호 문자열(Parenthesis String, PS)은 두 개의 괄호 기호인 ‘(’ 와 ‘)’ 만으로 구성되어 있는 문자열이다. \n# 그 중에서 괄호의 모양이 바르게 구성된 문자열을 올바른 괄호 문자열(Valid PS, VPS)이라고 부른다. \n# 한 쌍의 괄호 기호로 된 “( )” 문자열은 기본 VPS 이라고 부른다. \n# 만일 x 가 VPS 라면 이것을 하나의 괄호에 넣은 새로운 문자열 “(x)”도 VPS 가 된다. \n# 그리고 두 VPS x 와 y를 접합(concatenation)시킨 새로운 문자열 xy도 VPS 가 된다. \n# 예를 들어 “(())()”와 “((()))” 는 VPS 이지만 “(()(”, “(())()))” , 그리고 “(()” 는 모두 VPS 가 아닌 문자열이다. \n\n# 여러분은 입력으로 주어진 괄호 문자열이 VPS 인지 아닌지를 판단해서 그 결과를 YES 와 NO 로 나타내어야 한다. \n\n# 입력 데이터는 표준 입력을 사용한다. 입력은 T개의 테스트 데이터로 주어진다. 입력의 첫 번째 줄에는 입력 데이터의 수를 나타내는 정수 T가 주어진다. \n# 각 테스트 데이터의 첫째 줄에는 괄호 문자열이 한 줄에 주어진다. 하나의 괄호 문자열의 길이는 2 이상 50 이하이다. \n\n# 출력은 표준 출력을 사용한다. 만일 입력 괄호 문자열이 올바른 괄호 문자열(VPS)이면 “YES”, 아니면 “NO”를 한 줄에 하나씩 차례대로 출력해야 한다. \n\nt = input()\n\ndef check(t) :\n  for n in range(t) :\n    print(n)\n  \ncheck(t)\n"
+        }
+    ]
+}

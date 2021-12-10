@@ -1,0 +1,38 @@
+{
+    "sourceFile": "Lecture/wooseokgimozzi/week_3/00_bubble_sort.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1639133293617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1639133356700,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n   idx = 0\n   for num in array :\n     if array[idx] > array[idx + 1] :\n       array[idx], array[idx + 1] = array[idx + 1], array[idx]\n+      print(array)\n   return array\n \n \n bubble_sort(input)\n"
+                },
+                {
+                    "date": 1639133599100,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,11 @@\n input = [4, 6, 2, 9, 1]\n \n \n def bubble_sort(array):\n-  idx = 0\n-  for num in array :\n-    if array[idx] > array[idx + 1] :\n-      array[idx], array[idx + 1] = array[idx + 1], array[idx]\n-      print(array)\n-  return array\n+  n = len(array)\n+  for num in range(n - 1):\n+    \n \n \n bubble_sort(input)\n print(input)  # [1, 2, 4, 6, 9] 가 되어야 합니다!\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639133630206,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,11 @@\n \n \n def bubble_sort(array):\n   n = len(array)\n-  for num in range(n - 1):\n-    \n+  for i in range(n - 1):\n+    for j in range(n - i - 1) :\n+      print(j)\n \n \n bubble_sort(input)\n print(input)  # [1, 2, 4, 6, 9] 가 되어야 합니다!\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639133733416,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,11 @@\n def bubble_sort(array):\n   n = len(array)\n   for i in range(n - 1):\n     for j in range(n - i - 1) :\n-      print(j)\n+      if array[j] > array[j + 1] :\n+        array[j], array[j + 1] = array[j + 1], array[j]\n+      print(array)\n \n \n bubble_sort(input)\n print(input)  # [1, 2, 4, 6, 9] 가 되어야 합니다!\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639133747598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   for i in range(n - 1):\n     for j in range(n - i - 1) :\n       if array[j] > array[j + 1] :\n         array[j], array[j + 1] = array[j + 1], array[j]\n-      print(array)\n+  return array\n \n \n bubble_sort(input)\n print(input)  # [1, 2, 4, 6, 9] 가 되어야 합니다!\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1639133293617,
+            "name": "Commit-0",
+            "content": "input = [4, 6, 2, 9, 1]\n\n\ndef bubble_sort(array):\n  idx = 0\n  for num in array :\n    if array[idx] > array[idx + 1] :\n      array[idx], array[idx + 1] = array[idx + 1], array[idx]\n  return array\n\n\nbubble_sort(input)\nprint(input)  # [1, 2, 4, 6, 9] 가 되어야 합니다!"
+        }
+    ]
+}

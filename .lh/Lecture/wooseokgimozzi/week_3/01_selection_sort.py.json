@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 13,
+            "activePatchIndex": 40,
             "patches": [
                 {
                     "date": 1639134312739,
@@ -60,6 +60,114 @@
                 {
                     "date": 1639135469244,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     for j in range(n - i):\n       if array[i + j] < array[min_index] :\n         min_index = i + j\n       print(i+j)\n-    \n+    array[i + j], array[min_index] = array[min_index], array[i + j]\n   return\n \n \n selection_sort(input)\n"
+                },
+                {
+                    "date": 1639197602648,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,8 @@\n     min_index = i\n     for j in range(n - i):\n       if array[i + j] < array[min_index] :\n         min_index = i + j\n-      print(i+j)\n     array[i + j], array[min_index] = array[min_index], array[i + j]\n   return\n \n \n"
+                },
+                {
+                    "date": 1639197611458,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     for j in range(n - i):\n       if array[i + j] < array[min_index] :\n         min_index = i + j\n     array[i + j], array[min_index] = array[min_index], array[i + j]\n-  return\n+  return array\n \n \n selection_sort(input)\n print(input) # [1, 2, 4, 6, 9] 가 되어야 합니다!\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639197695874,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     min_index = i\n     for j in range(n - i):\n       if array[i + j] < array[min_index] :\n         min_index = i + j\n-    array[i + j], array[min_index] = array[min_index], array[i + j]\n+      array[i + j], array[min_index] = array[min_index], array[i + j]\n   return array\n \n \n selection_sort(input)\n"
+                },
+                {
+                    "date": 1639197705836,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,10 +7,10 @@\n     min_index = i\n     for j in range(n - i):\n       if array[i + j] < array[min_index] :\n         min_index = i + j\n-      array[i + j], array[min_index] = array[min_index], array[i + j]\n-  return array\n+  array[i + j], array[min_index] = array[min_index], array[i + j]\n+  return \n \n \n selection_sort(input)\n print(input) # [1, 2, 4, 6, 9] 가 되어야 합니다!\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639197716157,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     min_index = i\n     for j in range(n - i):\n       if array[i + j] < array[min_index] :\n         min_index = i + j\n-  array[i + j], array[min_index] = array[min_index], array[i + j]\n+    array[i + j], array[min_index] = array[min_index], array[i + j]\n   return \n \n \n selection_sort(input)\n"
+                },
+                {
+                    "date": 1639197748468,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n     min_index = i\n     for j in range(n - i):\n       if array[i + j] < array[min_index] :\n         min_index = i + j\n+        \n     array[i + j], array[min_index] = array[min_index], array[i + j]\n   return \n \n \n"
+                },
+                {
+                    "date": 1639197823033,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,10 @@\n     min_index = i\n     for j in range(n - i):\n       if array[i + j] < array[min_index] :\n         min_index = i + j\n-        \n+    print(array[i + j])\n+    print(array[min_index])\n     array[i + j], array[min_index] = array[min_index], array[i + j]\n   return \n \n \n"
+                },
+                {
+                    "date": 1639198245798,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n \n def selection_sort(array):\n   n = len(array)\n   for i in range(n - 1) :\n+    ㅔ갸ㅜ\n     min_index = i\n     for j in range(n - i):\n       if array[i + j] < array[min_index] :\n         min_index = i + j\n"
+                },
+                {
+                    "date": 1639198334840,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,15 +3,17 @@\n \n def selection_sort(array):\n   n = len(array)\n   for i in range(n - 1) :\n-    ㅔ갸ㅜ\n+    print('is i' , i)\n     min_index = i\n+    print('is min_index', min_index)\n     for j in range(n - i):\n+      print('is j' , j)\n       if array[i + j] < array[min_index] :\n         min_index = i + j\n-    print(array[i + j])\n-    print(array[min_index])\n+    print('is array[i + j]',array[i + j])\n+    print('is array[min_index]',array[min_index])\n     array[i + j], array[min_index] = array[min_index], array[i + j]\n   return \n \n \n"
+                },
+                {
+                    "date": 1639198399587,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,9 @@\n     for j in range(n - i):\n       print('is j' , j)\n       if array[i + j] < array[min_index] :\n         min_index = i + j\n+        print('after min_index ', min_index)\n     print('is array[i + j]',array[i + j])\n     print('is array[min_index]',array[min_index])\n     array[i + j], array[min_index] = array[min_index], array[i + j]\n   return \n"
+                },
+                {
+                    "date": 1639198448995,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,10 @@\n       print('is j' , j)\n       if array[i + j] < array[min_index] :\n         min_index = i + j\n         print('after min_index ', min_index)\n-    print('is array[i + j]',array[i + j])\n-    print('is array[min_index]',array[min_index])\n+        print('is array[i + j]',array[i + j])\n+        print('is array[min_index]',array[min_index])\n     array[i + j], array[min_index] = array[min_index], array[i + j]\n   return \n \n \n"
+                },
+                {
+                    "date": 1639198523640,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         min_index = i + j\n         print('after min_index ', min_index)\n         print('is array[i + j]',array[i + j])\n         print('is array[min_index]',array[min_index])\n-    array[i + j], array[min_index] = array[min_index], array[i + j]\n+        array[i + j], array[min_index] = array[min_index], array[i + j]\n   return \n \n \n selection_sort(input)\n"
+                },
+                {
+                    "date": 1639198528926,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         min_index = i + j\n         print('after min_index ', min_index)\n         print('is array[i + j]',array[i + j])\n         print('is array[min_index]',array[min_index])\n-        array[i + j], array[min_index] = array[min_index], array[i + j]\n+    array[i + j], array[min_index] = array[min_index], array[i + j]\n   return \n \n \n selection_sort(input)\n"
+                },
+                {
+                    "date": 1639198553473,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       if array[i + j] < array[min_index] :\n         min_index = i + j\n         print('after min_index ', min_index)\n         print('is array[i + j]',array[i + j])\n-        print('is array[min_index]',array[min_index])\n+        print(f'is array[{min_index}]',array[min_index])\n     array[i + j], array[min_index] = array[min_index], array[i + j]\n   return \n \n \n"
+                },
+                {
+                    "date": 1639198617272,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,10 @@\n       print('is j' , j)\n       if array[i + j] < array[min_index] :\n         min_index = i + j\n         print('after min_index ', min_index)\n-        print('is array[i + j]',array[i + j])\n-        print(f'is array[{min_index}]',array[min_index])\n+    print('is array[i + j]',array[i + j])\n+    print(f'is array[{min_index}]',array[min_index])\n     array[i + j], array[min_index] = array[min_index], array[i + j]\n   return \n \n \n"
+                },
+                {
+                    "date": 1639198652090,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n     print('is i' , i)\n     min_index = i\n     print('is min_index', min_index)\n     for j in range(n - i):\n+      print('is array', array)\n       print('is j' , j)\n       if array[i + j] < array[min_index] :\n         min_index = i + j\n         print('after min_index ', min_index)\n"
+                },
+                {
+                    "date": 1639198708892,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,10 @@\n     for j in range(n - i):\n       print('is array', array)\n       print('is j' , j)\n       if array[i + j] < array[min_index] :\n+        print('i + j', i)\n+        print('i + j', j)\n         min_index = i + j\n         print('after min_index ', min_index)\n     print('is array[i + j]',array[i + j])\n     print(f'is array[{min_index}]',array[min_index])\n"
+                },
+                {
+                    "date": 1639198776265,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,10 +14,10 @@\n         print('i + j', i)\n         print('i + j', j)\n         min_index = i + j\n         print('after min_index ', min_index)\n-    print('is array[i + j]',array[i + j])\n-    print(f'is array[{min_index}]',array[min_index])\n+      print('is array[i + j]',array[i + j])\n+      print(f'is array[{min_index}]',array[min_index])\n     array[i + j], array[min_index] = array[min_index], array[i + j]\n   return \n \n \n"
+                },
+                {
+                    "date": 1639198896822,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,15 +7,10 @@\n     print('is i' , i)\n     min_index = i\n     print('is min_index', min_index)\n     for j in range(n - i):\n-      print('is array', array)\n-      print('is j' , j)\n       if array[i + j] < array[min_index] :\n-        print('i + j', i)\n-        print('i + j', j)\n         min_index = i + j\n-        print('after min_index ', min_index)\n       print('is array[i + j]',array[i + j])\n       print(f'is array[{min_index}]',array[min_index])\n     array[i + j], array[min_index] = array[min_index], array[i + j]\n   return \n"
+                },
+                {
+                    "date": 1639198908343,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,15 +3,13 @@\n \n def selection_sort(array):\n   n = len(array)\n   for i in range(n - 1) :\n-    print('is i' , i)\n     min_index = i\n-    print('is min_index', min_index)\n     for j in range(n - i):\n       if array[i + j] < array[min_index] :\n         min_index = i + j\n-      print('is array[i + j]',array[i + j])\n+      print(f'is array[{i + j}]',array[i + j])\n       print(f'is array[{min_index}]',array[min_index])\n     array[i + j], array[min_index] = array[min_index], array[i + j]\n   return \n \n"
+                },
+                {
+                    "date": 1639198959150,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,9 @@\n         min_index = i + j\n       print(f'is array[{i + j}]',array[i + j])\n       print(f'is array[{min_index}]',array[min_index])\n     array[i + j], array[min_index] = array[min_index], array[i + j]\n+    print(array[i + j], array[min_index] = array[min_index], array[i + j])\n   return \n \n \n selection_sort(input)\n"
+                },
+                {
+                    "date": 1639198974634,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         min_index = i + j\n       print(f'is array[{i + j}]',array[i + j])\n       print(f'is array[{min_index}]',array[min_index])\n     array[i + j], array[min_index] = array[min_index], array[i + j]\n-    print(array[i + j], array[min_index] = array[min_index], array[i + j])\n+    print(array[i + j], array[min_index])\n   return \n \n \n selection_sort(input)\n"
+                },
+                {
+                    "date": 1639198981943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         min_index = i + j\n       print(f'is array[{i + j}]',array[i + j])\n       print(f'is array[{min_index}]',array[min_index])\n     array[i + j], array[min_index] = array[min_index], array[i + j]\n-    print(array[i + j], array[min_index])\n+      print(array[i + j], array[min_index])\n   return \n \n \n selection_sort(input)\n"
+                },
+                {
+                    "date": 1639198997148,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         min_index = i + j\n       print(f'is array[{i + j}]',array[i + j])\n       print(f'is array[{min_index}]',array[min_index])\n     array[i + j], array[min_index] = array[min_index], array[i + j]\n-      print(array[i + j], array[min_index])\n+    print(array[i + j], array[min_index])\n   return \n \n \n selection_sort(input)\n"
+                },
+                {
+                    "date": 1639200478457,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,10 +7,10 @@\n     min_index = i\n     for j in range(n - i):\n       if array[i + j] < array[min_index] :\n         min_index = i + j\n-      print(f'is array[{i + j}]',array[i + j])\n-      print(f'is array[{min_index}]',array[min_index])\n+      print(f'is array i + j[{i + j}]',array[i + j])\n+      print(f'is array min [{min_index}]',array[min_index])\n     array[i + j], array[min_index] = array[min_index], array[i + j]\n     print(array[i + j], array[min_index])\n   return \n \n"
+                },
+                {
+                    "date": 1639202083183,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n input = [4, 6, 2, 9, 1]\n \n \n def selection_sort(array):\n-  n = len(array)\n+  n = len(array) # \n   for i in range(n - 1) :\n     min_index = i\n     for j in range(n - i):\n       if array[i + j] < array[min_index] :\n"
+                },
+                {
+                    "date": 1639203839429,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,12 +7,9 @@\n     min_index = i\n     for j in range(n - i):\n       if array[i + j] < array[min_index] :\n         min_index = i + j\n-      print(f'is array i + j[{i + j}]',array[i + j])\n-      print(f'is array min [{min_index}]',array[min_index])\n-    array[i + j], array[min_index] = array[min_index], array[i + j]\n-    print(array[i + j], array[min_index])\n+    array[i], array[min_index] = array[min_index], array[i]\n   return \n \n \n selection_sort(input)\n"
                 }
             ],
             "date": 1639134312739,

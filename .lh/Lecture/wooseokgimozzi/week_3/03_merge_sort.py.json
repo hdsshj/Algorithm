@@ -1,0 +1,30 @@
+{
+    "sourceFile": "Lecture/wooseokgimozzi/week_3/03_merge_sort.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1639205782318,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1639206059919,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,17 +3,11 @@\n \n \n def merge(array1, array2):\n   array_c = []\n-  for i in array1:\n-    # 1\n-    for j in array2 :\n-      # 4\n-      if i < j :\n-        array_c.append(i)\n-      else : \n-        array_c.append(j)\n-    print(array_c)\n+  array1_idx = 0\n+  array2_idx = 0\n+  while \n     return\n \n \n print(merge(array_a, array_b))  # [1, 2, 3, 4, 5, 6, 7, 8] 가 되어야 합니다!\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639206097675,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,10 @@\n def merge(array1, array2):\n   array_c = []\n   array1_idx = 0\n   array2_idx = 0\n-  while \n+  while array1_idx < len(array) :\n+    \n     return\n \n \n print(merge(array_a, array_b))  # [1, 2, 3, 4, 5, 6, 7, 8] 가 되어야 합니다!\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639291082757,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n def merge(array1, array2):\n   array_c = []\n   array1_idx = 0\n   array2_idx = 0\n-  while array1_idx < len(array) :\n+  while array1_idx < len(array1) :\n     \n     return\n \n \n"
+                }
+            ],
+            "date": 1639205782318,
+            "name": "Commit-0",
+            "content": "array_a = [1, 2, 3, 5]\narray_b = [4, 6, 7, 8]\n\n\ndef merge(array1, array2):\n  array_c = []\n  for i in array1:\n    # 1\n    for j in array2 :\n      # 4\n      if i < j :\n        array_c.append(i)\n      else : \n        array_c.append(j)\n    print(array_c)\n    return\n\n\nprint(merge(array_a, array_b))  # [1, 2, 3, 4, 5, 6, 7, 8] 가 되어야 합니다!"
+        }
+    ]
+}

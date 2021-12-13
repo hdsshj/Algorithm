@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 4,
+            "activePatchIndex": 42,
             "patches": [
                 {
                     "date": 1639292066041,
@@ -24,6 +24,158 @@
                 {
                     "date": 1639293273094,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n n = int(n)\n \n def find_prime_num (n) :\n   n += 1                            # for문 사용을 위한 n += 1\n-  prime = [True] * n                # n개의 [True]가 있는 리스트 생성\n+  prime = [True] * (2 * n)                # n개의 [True]가 있는 리스트 생성\n   for i in range(2, int(n**0.5)+1): # n의 제곱근까지만 검사\n     if prime[i]:                    # prime[i]가 True일때\n       for j in range(2*i, n, i):    # prime 내 i의 배수들을 False로 변환\n         prime[j] = False\n"
+                },
+                {
+                    "date": 1639388725636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,17 +19,18 @@\n \n n = input()\n n = int(n)\n \n-def find_prime_num (n) :\n+def find_prime_num (num) :\n+  n = 2 * num\n   n += 1                            # for문 사용을 위한 n += 1\n-  prime = [True] * (2 * n)                # n개의 [True]가 있는 리스트 생성\n+  prime = [True] * (n)                # n개의 [True]가 있는 리스트 생성\n   for i in range(2, int(n**0.5)+1): # n의 제곱근까지만 검사\n     if prime[i]:                    # prime[i]가 True일때\n       for j in range(2*i, n, i):    # prime 내 i의 배수들을 False로 변환\n         prime[j] = False\n \n-  for i in range(m, n):\n+  for i in range(num, n):\n     if i > 1 and prime[i] == True:  # 1 이상이면서 남은 소수들을 출력\n       print(i)\n   return\n \n"
+                },
+                {
+                    "date": 1639388804443,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,9 @@\n n = input()\n n = int(n)\n \n def find_prime_num (num) :\n+  prime_num_list = []\n   n = 2 * num\n   n += 1                            # for문 사용을 위한 n += 1\n   prime = [True] * (n)                # n개의 [True]가 있는 리스트 생성\n   for i in range(2, int(n**0.5)+1): # n의 제곱근까지만 검사\n@@ -30,8 +31,9 @@\n         prime[j] = False\n \n   for i in range(num, n):\n     if i > 1 and prime[i] == True:  # 1 이상이면서 남은 소수들을 출력\n-      print(i)\n+      prime_num_list.append(i)\n+      print(len(prime_num_list))\n   return\n\\ No newline at end of file\n \n-print(find_prime_num(n))\n+find_prime_num(n)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639388818587,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,8 +32,8 @@\n \n   for i in range(num, n):\n     if i > 1 and prime[i] == True:  # 1 이상이면서 남은 소수들을 출력\n       prime_num_list.append(i)\n-      print(len(prime_num_list))\n+  print(len(prime_num_list))\n   return\n \n find_prime_num(n)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639388837840,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,8 +32,8 @@\n \n   for i in range(num, n):\n     if i > 1 and prime[i] == True:  # 1 이상이면서 남은 소수들을 출력\n       prime_num_list.append(i)\n-  print(len(prime_num_list))\n+  print('ddd',len(prime_num_list))\n   return\n \n find_prime_num(n)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639388844107,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,8 +32,8 @@\n \n   for i in range(num, n):\n     if i > 1 and prime[i] == True:  # 1 이상이면서 남은 소수들을 출력\n       prime_num_list.append(i)\n-  print('ddd',len(prime_num_list))\n+  print(len(prime_num_list))\n   return\n \n find_prime_num(n)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639388918347,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,10 @@\n n = input()\n n = int(n)\n \n def find_prime_num (num) :\n+  if num == 0 :\n+    return\n   prime_num_list = []\n   n = 2 * num\n   n += 1                            # for문 사용을 위한 n += 1\n   prime = [True] * (n)                # n개의 [True]가 있는 리스트 생성\n"
+                },
+                {
+                    "date": 1639388994266,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,8 +34,10 @@\n \n   for i in range(num, n):\n     if i > 1 and prime[i] == True:  # 1 이상이면서 남은 소수들을 출력\n       prime_num_list.append(i)\n+      \n   print(len(prime_num_list))\n+  print(prime_num_list)\n   return\n \n find_prime_num(n)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639389018214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n     if prime[i]:                    # prime[i]가 True일때\n       for j in range(2*i, n, i):    # prime 내 i의 배수들을 False로 변환\n         prime[j] = False\n \n-  for i in range(num, n):\n+  for i in range(num + 1, n):\n     if i > 1 and prime[i] == True:  # 1 이상이면서 남은 소수들을 출력\n       prime_num_list.append(i)\n       \n   print(len(prime_num_list))\n"
+                },
+                {
+                    "date": 1639389033474,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,8 +36,7 @@\n     if i > 1 and prime[i] == True:  # 1 이상이면서 남은 소수들을 출력\n       prime_num_list.append(i)\n       \n   print(len(prime_num_list))\n-  print(prime_num_list)\n   return\n \n find_prime_num(n)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639389114372,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n     if prime[i]:                    # prime[i]가 True일때\n       for j in range(2*i, n, i):    # prime 내 i의 배수들을 False로 변환\n         prime[j] = False\n \n-  for i in range(num + 1, n):\n+  for i in range(num + 1, n + 1):\n     if i > 1 and prime[i] == True:  # 1 이상이면서 남은 소수들을 출력\n       prime_num_list.append(i)\n       \n   print(len(prime_num_list))\n"
+                },
+                {
+                    "date": 1639389172015,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,15 +15,15 @@\n # \n \n # 출력\n # n < result <= 2n\n-\n n = input()\n n = int(n)\n \n def find_prime_num (num) :\n   if num == 0 :\n     return\n+  \n   prime_num_list = []\n   n = 2 * num\n   n += 1                            # for문 사용을 위한 n += 1\n   prime = [True] * (n)                # n개의 [True]가 있는 리스트 생성\n@@ -31,9 +31,9 @@\n     if prime[i]:                    # prime[i]가 True일때\n       for j in range(2*i, n, i):    # prime 내 i의 배수들을 False로 변환\n         prime[j] = False\n \n-  for i in range(num + 1, n + 1):\n+  for i in range(num + 1, int(n) + 1):\n     if i > 1 and prime[i] == True:  # 1 이상이면서 남은 소수들을 출력\n       prime_num_list.append(i)\n       \n   print(len(prime_num_list))\n"
+                },
+                {
+                    "date": 1639389178180,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n     if prime[i]:                    # prime[i]가 True일때\n       for j in range(2*i, n, i):    # prime 내 i의 배수들을 False로 변환\n         prime[j] = False\n \n-  for i in range(num + 1, int(n) + 1):\n+  for i in range(num + 1, n + 1):\n     if i > 1 and prime[i] == True:  # 1 이상이면서 남은 소수들을 출력\n       prime_num_list.append(i)\n       \n   print(len(prime_num_list))\n"
+                },
+                {
+                    "date": 1639389196653,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n     if prime[i]:                    # prime[i]가 True일때\n       for j in range(2*i, n, i):    # prime 내 i의 배수들을 False로 변환\n         prime[j] = False\n \n-  for i in range(num + 1, n + 1):\n+  for i in range(num + 1, n):\n     if i > 1 and prime[i] == True:  # 1 이상이면서 남은 소수들을 출력\n       prime_num_list.append(i)\n       \n   print(len(prime_num_list))\n"
+                },
+                {
+                    "date": 1639389203974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n     if prime[i]:                    # prime[i]가 True일때\n       for j in range(2*i, n, i):    # prime 내 i의 배수들을 False로 변환\n         prime[j] = False\n \n-  for i in range(num + 1, n):\n+  for i in range(num + 1, n + 1):\n     if i > 1 and prime[i] == True:  # 1 이상이면서 남은 소수들을 출력\n       prime_num_list.append(i)\n       \n   print(len(prime_num_list))\n"
+                },
+                {
+                    "date": 1639389212369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n     if prime[i]:                    # prime[i]가 True일때\n       for j in range(2*i, n, i):    # prime 내 i의 배수들을 False로 변환\n         prime[j] = False\n \n-  for i in range(num + 1, n + 1):\n+  for i in range(num + 1, int(n) + 1):\n     if i > 1 and prime[i] == True:  # 1 이상이면서 남은 소수들을 출력\n       prime_num_list.append(i)\n       \n   print(len(prime_num_list))\n"
+                },
+                {
+                    "date": 1639389225765,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,10 @@\n     if prime[i]:                    # prime[i]가 True일때\n       for j in range(2*i, n, i):    # prime 내 i의 배수들을 False로 변환\n         prime[j] = False\n \n-  for i in range(num + 1, int(n) + 1):\n+  for i in range(num + 1, n):\n+    print(n)\n     if i > 1 and prime[i] == True:  # 1 이상이면서 남은 소수들을 출력\n       prime_num_list.append(i)\n       \n   print(len(prime_num_list))\n"
+                },
+                {
+                    "date": 1639389235220,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n       for j in range(2*i, n, i):    # prime 내 i의 배수들을 False로 변환\n         prime[j] = False\n \n   for i in range(num + 1, n):\n-    print(n)\n+    print(n + 1)\n     if i > 1 and prime[i] == True:  # 1 이상이면서 남은 소수들을 출력\n       prime_num_list.append(i)\n       \n   print(len(prime_num_list))\n"
+                },
+                {
+                    "date": 1639389262599,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n       for j in range(2*i, n, i):    # prime 내 i의 배수들을 False로 변환\n         prime[j] = False\n \n   for i in range(num + 1, n):\n-    print(n + 1)\n+    print(num+1,'',n + 1)\n     if i > 1 and prime[i] == True:  # 1 이상이면서 남은 소수들을 출력\n       prime_num_list.append(i)\n       \n   print(len(prime_num_list))\n"
+                },
+                {
+                    "date": 1639389281560,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n       for j in range(2*i, n, i):    # prime 내 i의 배수들을 False로 변환\n         prime[j] = False\n \n   for i in range(num + 1, n):\n-    print(num+1,'',n + 1)\n+    print(num+1,'',n)\n     if i > 1 and prime[i] == True:  # 1 이상이면서 남은 소수들을 출력\n       prime_num_list.append(i)\n       \n   print(len(prime_num_list))\n"
+                },
+                {
+                    "date": 1639389309548,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n     if prime[i]:                    # prime[i]가 True일때\n       for j in range(2*i, n, i):    # prime 내 i의 배수들을 False로 변환\n         prime[j] = False\n \n-  for i in range(num + 1, n):\n+  for i in range(num + 1, n - 1):\n     print(num+1,'',n)\n     if i > 1 and prime[i] == True:  # 1 이상이면서 남은 소수들을 출력\n       prime_num_list.append(i)\n       \n"
+                },
+                {
+                    "date": 1639389318550,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n       for j in range(2*i, n, i):    # prime 내 i의 배수들을 False로 변환\n         prime[j] = False\n \n   for i in range(num + 1, n - 1):\n-    print(num+1,'',n)\n+    print(num+1,'',n - 1)\n     if i > 1 and prime[i] == True:  # 1 이상이면서 남은 소수들을 출력\n       prime_num_list.append(i)\n       \n   print(len(prime_num_list))\n"
+                },
+                {
+                    "date": 1639389557816,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,7 +37,6 @@\n     if i > 1 and prime[i] == True:  # 1 이상이면서 남은 소수들을 출력\n       prime_num_list.append(i)\n       \n   print(len(prime_num_list))\n-  return\n \n find_prime_num(n)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639390200237,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,10 +15,9 @@\n # \n \n # 출력\n # n < result <= 2n\n-n = input()\n-n = int(n)\n+n = map(int,input().split())\n \n def find_prime_num (num) :\n   if num == 0 :\n     return\n"
+                },
+                {
+                    "date": 1639391327346,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,8 @@\n # \n \n # 출력\n # n < result <= 2n\n-n = map(int,input().split())\n \n def find_prime_num (num) :\n   if num == 0 :\n     return\n@@ -26,8 +25,9 @@\n   n = 2 * num\n   n += 1                            # for문 사용을 위한 n += 1\n   prime = [True] * (n)                # n개의 [True]가 있는 리스트 생성\n   for i in range(2, int(n**0.5)+1): # n의 제곱근까지만 검사\n+    n = map(int,input().split())\n     if prime[i]:                    # prime[i]가 True일때\n       for j in range(2*i, n, i):    # prime 내 i의 배수들을 False로 변환\n         prime[j] = False\n \n@@ -37,5 +37,5 @@\n       prime_num_list.append(i)\n       \n   print(len(prime_num_list))\n \n-find_prime_num(n)\n\\ No newline at end of file\n+find_prime_num()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639391340670,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,9 @@\n # \n \n # 출력\n # n < result <= 2n\n+n = map(int,input().split())\n \n def find_prime_num (num) :\n   if num == 0 :\n     return\n@@ -25,9 +26,8 @@\n   n = 2 * num\n   n += 1                            # for문 사용을 위한 n += 1\n   prime = [True] * (n)                # n개의 [True]가 있는 리스트 생성\n   for i in range(2, int(n**0.5)+1): # n의 제곱근까지만 검사\n-    n = map(int,input().split())\n     if prime[i]:                    # prime[i]가 True일때\n       for j in range(2*i, n, i):    # prime 내 i의 배수들을 False로 변환\n         prime[j] = False\n \n"
+                },
+                {
+                    "date": 1639410651803,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,27 +15,28 @@\n # \n \n # 출력\n # n < result <= 2n\n-n = map(int,input().split())\n \n-def find_prime_num (num) :\n-  if num == 0 :\n-    return\n-  \n-  prime_num_list = []\n-  n = 2 * num\n-  n += 1                            # for문 사용을 위한 n += 1\n-  prime = [True] * (n)                # n개의 [True]가 있는 리스트 생성\n-  for i in range(2, int(n**0.5)+1): # n의 제곱근까지만 검사\n-    if prime[i]:                    # prime[i]가 True일때\n-      for j in range(2*i, n, i):    # prime 내 i의 배수들을 False로 변환\n-        prime[j] = False\n+def find_prime_num () :\n+  while 1 :\n+    num = input()\n+    if num == 0 :\n+      break\n+    \n+    prime_num_list = []\n+    n = 2 * num\n+    n += 1                            # for문 사용을 위한 n += 1\n+    prime = [True] * (n)                # n개의 [True]가 있는 리스트 생성\n+    for i in range(2, int(n**0.5)+1): # n의 제곱근까지만 검사\n+      if prime[i]:                    # prime[i]가 True일때\n+        for j in range(2*i, n, i):    # prime 내 i의 배수들을 False로 변환\n+          prime[j] = False\n \n-  for i in range(num + 1, n - 1):\n-    print(num+1,'',n - 1)\n-    if i > 1 and prime[i] == True:  # 1 이상이면서 남은 소수들을 출력\n-      prime_num_list.append(i)\n-      \n-  print(len(prime_num_list))\n+    for i in range(num + 1, n - 1):\n+      print(num+1,'',n - 1)\n+      if i > 1 and prime[i] == True:  # 1 이상이면서 남은 소수들을 출력\n+        prime_num_list.append(i)\n+        \n+    print(len(prime_num_list))\n \n find_prime_num()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639410672473,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,8 @@\n       break\n     \n     prime_num_list = []\n     n = 2 * num\n-    n += 1                            # for문 사용을 위한 n += 1\n     prime = [True] * (n)                # n개의 [True]가 있는 리스트 생성\n     for i in range(2, int(n**0.5)+1): # n의 제곱근까지만 검사\n       if prime[i]:                    # prime[i]가 True일때\n         for j in range(2*i, n, i):    # prime 내 i의 배수들을 False로 변환\n"
+                },
+                {
+                    "date": 1639410677621,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,9 @@\n       break\n     \n     prime_num_list = []\n     n = 2 * num\n+    n += 1                            # for문 사용을 위한 n += 1\n     prime = [True] * (n)                # n개의 [True]가 있는 리스트 생성\n     for i in range(2, int(n**0.5)+1): # n의 제곱근까지만 검사\n       if prime[i]:                    # prime[i]가 True일때\n         for j in range(2*i, n, i):    # prime 내 i의 배수들을 False로 변환\n"
+                },
+                {
+                    "date": 1639410696927,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,9 @@\n \n def find_prime_num () :\n   while 1 :\n     num = input()\n+    num = int(num)\n     if num == 0 :\n       break\n     \n     prime_num_list = []\n"
+                },
+                {
+                    "date": 1639410706226,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,8 @@\n         for j in range(2*i, n, i):    # prime 내 i의 배수들을 False로 변환\n           prime[j] = False\n \n     for i in range(num + 1, n - 1):\n-      print(num+1,'',n - 1)\n       if i > 1 and prime[i] == True:  # 1 이상이면서 남은 소수들을 출력\n         prime_num_list.append(i)\n         \n     print(len(prime_num_list))\n"
+                },
+                {
+                    "date": 1639410816230,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,8 @@\n     num = input()\n     num = int(num)\n     if num == 0 :\n       break\n-    \n     prime_num_list = []\n     n = 2 * num\n     n += 1                            # for문 사용을 위한 n += 1\n     prime = [True] * (n)                # n개의 [True]가 있는 리스트 생성\n"
+                },
+                {
+                    "date": 1639410863059,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,11 @@\n           prime[j] = False\n \n     for i in range(num + 1, n - 1):\n       if i > 1 and prime[i] == True:  # 1 이상이면서 남은 소수들을 출력\n+        print(num + 1, n - 1)\n         prime_num_list.append(i)\n+        print(prime_num_list)\n         \n     print(len(prime_num_list))\n \n find_prime_num()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639410890600,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n         for j in range(2*i, n, i):    # prime 내 i의 배수들을 False로 변환\n           prime[j] = False\n \n     for i in range(num + 1, n - 1):\n-      if i > 1 and prime[i] == True:  # 1 이상이면서 남은 소수들을 출력\n+      if prime[i] == True:  # 1 이상이면서 남은 소수들을 출력\n         print(num + 1, n - 1)\n         prime_num_list.append(i)\n         print(prime_num_list)\n         \n"
+                },
+                {
+                    "date": 1639410910401,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n         for j in range(2*i, n, i):    # prime 내 i의 배수들을 False로 변환\n           prime[j] = False\n \n     for i in range(num + 1, n - 1):\n-      if prime[i] == True:  # 1 이상이면서 남은 소수들을 출력\n+      if i > 1 and prime[i] == True:  # 1 이상이면서 남은 소수들을 출력\n         print(num + 1, n - 1)\n         prime_num_list.append(i)\n         print(prime_num_list)\n         \n"
+                },
+                {
+                    "date": 1639415427001,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,8 +32,9 @@\n         for j in range(2*i, n, i):    # prime 내 i의 배수들을 False로 변환\n           prime[j] = False\n \n     for i in range(num + 1, n - 1):\n+      print('i is',i)\n       if i > 1 and prime[i] == True:  # 1 이상이면서 남은 소수들을 출력\n         print(num + 1, n - 1)\n         prime_num_list.append(i)\n         print(prime_num_list)\n"
+                },
+                {
+                    "date": 1639415444470,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n         for j in range(2*i, n, i):    # prime 내 i의 배수들을 False로 변환\n           prime[j] = False\n \n     for i in range(num + 1, n - 1):\n-      print('i is',i)\n+      print('is i ===>',i)\n       if i > 1 and prime[i] == True:  # 1 이상이면서 남은 소수들을 출력\n         print(num + 1, n - 1)\n         prime_num_list.append(i)\n         print(prime_num_list)\n"
+                },
+                {
+                    "date": 1639415624080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n       if prime[i]:                    # prime[i]가 True일때\n         for j in range(2*i, n, i):    # prime 내 i의 배수들을 False로 변환\n           prime[j] = False\n \n-    for i in range(num + 1, n - 1):\n+    for i in range(num + 1, n):\n       print('is i ===>',i)\n       if i > 1 and prime[i] == True:  # 1 이상이면서 남은 소수들을 출력\n         print(num + 1, n - 1)\n         prime_num_list.append(i)\n"
+                },
+                {
+                    "date": 1639416125875,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,13 +32,10 @@\n         for j in range(2*i, n, i):    # prime 내 i의 배수들을 False로 변환\n           prime[j] = False\n \n     for i in range(num + 1, n):\n-      print('is i ===>',i)\n       if i > 1 and prime[i] == True:  # 1 이상이면서 남은 소수들을 출력\n-        print(num + 1, n - 1)\n         prime_num_list.append(i)\n-        print(prime_num_list)\n         \n     print(len(prime_num_list))\n \n find_prime_num()\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1639292066041,

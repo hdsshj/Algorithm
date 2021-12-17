@@ -1,0 +1,58 @@
+{
+    "sourceFile": "Lecture/wooseokgimozzi/week_2/03_sum_linked_list.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1639710365637,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1639710620975,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,10 @@\n         cur.next = Node(value)\n \n \n def get_linked_list_sum(linked_list_1, linked_list_2):\n+    sum_1 = 0\n+    head_1 = linked_list_1.head\n     # 구현해보세요!\n     return 1032\n \n \n"
+                },
+                {
+                    "date": 1639710649833,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,10 @@\n \n def get_linked_list_sum(linked_list_1, linked_list_2):\n     sum_1 = 0\n     head_1 = linked_list_1.head\n+    while head_1 is not None :\n+      \n     # 구현해보세요!\n     return 1032\n \n \n"
+                },
+                {
+                    "date": 1639710669900,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n def get_linked_list_sum(linked_list_1, linked_list_2):\n     sum_1 = 0\n     head_1 = linked_list_1.head\n     while head_1 is not None :\n-      \n+      head_1 = head_1.next\n     # 구현해보세요!\n     return 1032\n \n \n"
+                },
+                {
+                    "date": 1639710692280,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,9 @@\n def get_linked_list_sum(linked_list_1, linked_list_2):\n     sum_1 = 0\n     head_1 = linked_list_1.head\n     while head_1 is not None :\n+      sum_1 = head_1.data\n       head_1 = head_1.next\n     # 구현해보세요!\n     return 1032\n \n"
+                },
+                {
+                    "date": 1639710701386,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n def get_linked_list_sum(linked_list_1, linked_list_2):\n     sum_1 = 0\n     head_1 = linked_list_1.head\n     while head_1 is not None :\n-      sum_1 = head_1.data\n+      sum_1 += head_1.data\n       head_1 = head_1.next\n     # 구현해보세요!\n     return 1032\n \n"
+                },
+                {
+                    "date": 1639710815934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n def get_linked_list_sum(linked_list_1, linked_list_2):\n     sum_1 = 0\n     head_1 = linked_list_1.head\n     while head_1 is not None :\n-      sum_1 += head_1.data\n+      sum_1 = sum_1 * 10 + head_1.data\n       head_1 = head_1.next\n     # 구현해보세요!\n     return 1032\n \n"
+                },
+                {
+                    "date": 1639710924404,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,10 +20,17 @@\n     head_1 = linked_list_1.head\n     while head_1 is not None :\n       sum_1 = sum_1 * 10 + head_1.data\n       head_1 = head_1.next\n+      \n+    sum_2 = 0\n+    head_2 = linked_list_2.head\n+    while head_2 is not None :\n+      sum_2 = sum_2 * 10 + head_2.data\n+      head_2 = head_2.next\n+      \n     # 구현해보세요!\n-    return 1032\n+    return sum_1 + sum_2\n \n \n linked_list_1 = LinkedList(6)\n linked_list_1.append(7)\n"
+                },
+                {
+                    "date": 1639710931211,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n \n \n linked_list_1 = LinkedList(6)\n linked_list_1.append(7)\n-linked_list_1.append(8)\n+linked_list_1.append(0)\n \n linked_list_2 = LinkedList(3)\n linked_list_2.append(5)\n linked_list_2.append(4)\n"
+                },
+                {
+                    "date": 1639711350244,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,30 +12,29 @@\n         cur = self.head\n         while cur.next is not None:\n             cur = cur.next\n         cur.next = Node(value)\n+        \n \n+def sum_linked_list (linked_list) :\n+  sum_value = 0\n+  head = linked_list.head\n+  while head is not None :\n+    sum_value = sum_value * 10 + head.data\n+    head = head.next\n+  return sum_value\n \n+\n def get_linked_list_sum(linked_list_1, linked_list_2):\n-    sum_1 = 0\n-    head_1 = linked_list_1.head\n-    while head_1 is not None :\n-      sum_1 = sum_1 * 10 + head_1.data\n-      head_1 = head_1.next\n-      \n-    sum_2 = 0\n-    head_2 = linked_list_2.head\n-    while head_2 is not None :\n-      sum_2 = sum_2 * 10 + head_2.data\n-      head_2 = head_2.next\n-      \n+    sum_1 = sum_linked_list(linked_list_1)\n+    sum_2 = sum_linked_list(linked_list_2)\n     # 구현해보세요!\n     return sum_1 + sum_2\n \n \n linked_list_1 = LinkedList(6)\n linked_list_1.append(7)\n-linked_list_1.append(0)\n+linked_list_1.append(8)\n \n linked_list_2 = LinkedList(3)\n linked_list_2.append(5)\n linked_list_2.append(4)\n"
+                },
+                {
+                    "date": 1639711386281,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,14 +15,14 @@\n         cur.next = Node(value)\n         \n \n def sum_linked_list (linked_list) :\n-  sum_value = 0\n-  head = linked_list.head\n-  while head is not None :\n-    sum_value = sum_value * 10 + head.data\n-    head = head.next\n-  return sum_value\n+    sum_value = 0\n+    head = linked_list.head\n+    while head is not None :\n+        sum_value = sum_value * 10 + head.data\n+        head = head.next\n+    return sum_value\n \n \n def get_linked_list_sum(linked_list_1, linked_list_2):\n     sum_1 = sum_linked_list(linked_list_1)\n"
+                }
+            ],
+            "date": 1639710365637,
+            "name": "Commit-0",
+            "content": "class Node:\n    def __init__(self, data):\n        self.data = data\n        self.next = None\n\n\nclass LinkedList:\n    def __init__(self, value):\n        self.head = Node(value)\n\n    def append(self, value):\n        cur = self.head\n        while cur.next is not None:\n            cur = cur.next\n        cur.next = Node(value)\n\n\ndef get_linked_list_sum(linked_list_1, linked_list_2):\n    # 구현해보세요!\n    return 1032\n\n\nlinked_list_1 = LinkedList(6)\nlinked_list_1.append(7)\nlinked_list_1.append(8)\n\nlinked_list_2 = LinkedList(3)\nlinked_list_2.append(5)\nlinked_list_2.append(4)\n\nprint(get_linked_list_sum(linked_list_1, linked_list_2))"
+        }
+    ]
+}

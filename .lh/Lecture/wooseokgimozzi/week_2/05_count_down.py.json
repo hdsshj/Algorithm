@@ -1,0 +1,18 @@
+{
+    "sourceFile": "Lecture/wooseokgimozzi/week_2/05_count_down.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1639753566372,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1639753566372,
+            "name": "Commit-0",
+            "content": "def count_down(number):\n    print(number)          # number를 출력하고\n    count_down(number - 1) # count_down 함수를 number - 1 인자를 주고 다시 호출한다!\n\n\ncount_down(60)"
+        }
+    ]
+}

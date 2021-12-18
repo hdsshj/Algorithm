@@ -1,0 +1,102 @@
+{
+    "sourceFile": "Lecture/wooseokgimozzi/week_2/04_binary_search.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 21,
+            "patches": [
+                {
+                    "date": 1639711787721,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1639712059232,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,11 @@\n finding_numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]\n \n \n def is_existing_target_number_binary(target, array):\n+    min_num = array[0]\n+    max_num = array[-1]\n+    print(max_num)\n     # 구현해보세요!\n     return False\n \n \n"
+                },
+                {
+                    "date": 1639712152231,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,12 @@\n \n def is_existing_target_number_binary(target, array):\n     min_num = array[0]\n     max_num = array[-1]\n+    search_num = 0\n+    \n+    while search_num != target :\n+      \n     print(max_num)\n     # 구현해보세요!\n     return False\n \n"
+                },
+                {
+                    "date": 1639712238178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,11 +2,11 @@\n finding_numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]\n \n \n def is_existing_target_number_binary(target, array):\n-    min_num = array[0]\n-    max_num = array[-1]\n-    search_num = 0\n+    min_num = 0\n+    max_num = len(array) - 1\n+    search_num = (min_num + max_num) // 2\n     \n     while search_num != target :\n       \n     print(max_num)\n"
+                },
+                {
+                    "date": 1639712274178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n finding_numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]\n \n \n def is_existing_target_number_binary(target, array):\n+    # index값\n     min_num = 0\n     max_num = len(array) - 1\n     search_num = (min_num + max_num) // 2\n     \n"
+                },
+                {
+                    "date": 1639712315871,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,14 +2,14 @@\n finding_numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]\n \n \n def is_existing_target_number_binary(target, array):\n-    # index값\n+    # index값\u001f\n     min_num = 0\n     max_num = len(array) - 1\n     search_num = (min_num + max_num) // 2\n     \n-    while search_num != target :\n+    while min_num <= max_num :\n       \n     print(max_num)\n     # 구현해보세요!\n     return False\n"
+                },
+                {
+                    "date": 1639712366526,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     search_num = (min_num + max_num) // 2\n     \n     while min_num <= max_num :\n       \n-    print(max_num)\n+      print(max_num)\n     # 구현해보세요!\n     return False\n \n \n"
+                },
+                {
+                    "date": 1639712403083,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,10 @@\n     max_num = len(array) - 1\n     search_num = (min_num + max_num) // 2\n     \n     while min_num <= max_num :\n-      \n+      if array[search_num] == target :\n+        return True\n       print(max_num)\n     # 구현해보세요!\n     return False\n \n"
+                },
+                {
+                    "date": 1639712632797,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,14 @@\n     \n     while min_num <= max_num :\n       if array[search_num] == target :\n         return True\n+      \n+      if array[search_num] < target :\n+        max_num = search_num - 1\n+      \n+      if array[search_num] > target :\n+        min_num = search_num + 1\n       print(max_num)\n     # 구현해보세요!\n     return False\n \n"
+                },
+                {
+                    "date": 1639712884208,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,12 +11,12 @@\n     while min_num <= max_num :\n       if array[search_num] == target :\n         return True\n       \n-      if array[search_num] < target :\n+      if array[search_num] > target :\n         max_num = search_num - 1\n       \n-      if array[search_num] > target :\n+      if array[search_num] < target :\n         min_num = search_num + 1\n       print(max_num)\n     # 구현해보세요!\n     return False\n"
+                },
+                {
+                    "date": 1639712949193,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,14 +10,13 @@\n     \n     while min_num <= max_num :\n       if array[search_num] == target :\n         return True\n-      \n-      if array[search_num] > target :\n+      elif array[search_num] > target :\n         max_num = search_num - 1\n-      \n-      if array[search_num] < target :\n+      else :\n         min_num = search_num + 1\n+      search_num = (max_num + min_num) // 2\n       print(max_num)\n     # 구현해보세요!\n     return False\n \n"
+                },
+                {
+                    "date": 1639712979340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,13 +3,15 @@\n \n \n def is_existing_target_number_binary(target, array):\n     # index값\u001f\n+    count = 0\n     min_num = 0\n     max_num = len(array) - 1\n     search_num = (min_num + max_num) // 2\n     \n     while min_num <= max_num :\n+      count += 1\n       if array[search_num] == target :\n         return True\n       elif array[search_num] > target :\n         max_num = search_num - 1\n"
+                },
+                {
+                    "date": 1639712985907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,8 @@\n         max_num = search_num - 1\n       else :\n         min_num = search_num + 1\n       search_num = (max_num + min_num) // 2\n-      print(max_num)\n     # 구현해보세요!\n     return False\n \n \n"
+                },
+                {
+                    "date": 1639713012333,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,9 @@\n         max_num = search_num - 1\n       else :\n         min_num = search_num + 1\n       search_num = (max_num + min_num) // 2\n+    print('is count', count)\n     # 구현해보세요!\n     return False\n \n \n"
+                },
+                {
+                    "date": 1639713087040,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-finding_target = 14\n+39finding_target = 14\n finding_numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]\n \n \n def is_existing_target_number_binary(target, array):\n"
+                },
+                {
+                    "date": 1639713092405,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-39finding_target = 14\n+finding_target = 39\n finding_numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]\n \n \n def is_existing_target_number_binary(target, array):\n"
+                },
+                {
+                    "date": 1639713099094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-finding_target = 39\n+finding_target = 11\n finding_numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]\n \n \n def is_existing_target_number_binary(target, array):\n"
+                },
+                {
+                    "date": 1639713128987,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-finding_target = 11\n+finding_target = 16\n finding_numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]\n \n \n def is_existing_target_number_binary(target, array):\n@@ -11,15 +11,15 @@\n     \n     while min_num <= max_num :\n       count += 1\n       if array[search_num] == target :\n+        print('is count', count)\n         return True\n       elif array[search_num] > target :\n         max_num = search_num - 1\n       else :\n         min_num = search_num + 1\n       search_num = (max_num + min_num) // 2\n-    print('is count', count)\n     # 구현해보세요!\n     return False\n \n \n"
+                },
+                {
+                    "date": 1639713138276,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-finding_target = 16\n+finding_target = 8\n finding_numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]\n \n \n def is_existing_target_number_binary(target, array):\n"
+                },
+                {
+                    "date": 1639713148980,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-finding_target = 8\n+finding_target = 14\n finding_numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]\n \n \n def is_existing_target_number_binary(target, array):\n"
+                },
+                {
+                    "date": 1639716527623,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,6 +22,14 @@\n     # 구현해보세요!\n     return False\n \n \n+1 2 3 4 5\n+1 2 3 4 5\n+1 2 3 4 5\n+1 2 3 4 5\n+1 2 3 4 5\n+1 2 3 4 5\n+1 2 3 4 5\n+\n result = is_existing_target_number_binary(finding_target, finding_numbers)\n print(result)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639716614765,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n finding_numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]\n \n \n def is_existing_target_number_binary(target, array):\n-    # index값\u001f\n+    # index값\n     count = 0\n     min_num = 0\n     max_num = len(array) - 1\n     search_num = (min_num + max_num) // 2\n@@ -21,15 +21,6 @@\n       search_num = (max_num + min_num) // 2\n     # 구현해보세요!\n     return False\n \n-\n-1 2 3 4 5\n-1 2 3 4 5\n-1 2 3 4 5\n-1 2 3 4 5\n-1 2 3 4 5\n-1 2 3 4 5\n-1 2 3 4 5\n-\n result = is_existing_target_number_binary(finding_target, finding_numbers)\n print(result)\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1639711787721,
+            "name": "Commit-0",
+            "content": "finding_target = 14\nfinding_numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]\n\n\ndef is_existing_target_number_binary(target, array):\n    # 구현해보세요!\n    return False\n\n\nresult = is_existing_target_number_binary(finding_target, finding_numbers)\nprint(result)"
+        }
+    ]
+}
